@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compound 个人信息处理规则 · Compound</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#EFE9DD">
+<link rel="icon" href="/assets/compound-mark.png">
+<style>
+:root{--bg:#EFE9DD;--surface:#FBF7EC;--ink:#010116;--accent:#4A6FC7;--accent-deep:#2E4FA4;
+--muted:rgba(1,1,22,.62);--soft:rgba(1,1,22,.18);--hairline:rgba(1,1,22,.12);--danger:#A0392B;
+--serif-cjk:"Noto Serif SC","Noto Serif TC","Source Han Serif SC","Songti SC","STSong",serif;
+--sans:"Manrope","Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+--mono:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.8;
+-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:0 22px;word-wrap:break-word;overflow-wrap:anywhere}
+.doc{max-width:720px;margin:0 auto;padding:28px 0 96px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;
+padding:14px 0 18px;border-bottom:.5px solid var(--ink);margin-bottom:8px;
+position:sticky;top:0;background:var(--bg);z-index:5}
+.topbar .brand{display:flex;align-items:center;gap:8px;font-weight:600;letter-spacing:.4px;font-size:13px}
+.topbar .brand img{height:22px;width:auto;display:block}
+.back{font-size:12px;letter-spacing:.5px;color:var(--accent-deep);text-decoration:none;
+border:.8px solid var(--soft);padding:7px 14px;border-radius:999px;white-space:nowrap;transition:.15s}
+.back:hover{border-color:var(--accent);background:rgba(74,111,199,.07)}
+.doc-head{padding:28px 0 8px}
+.doc-overline{font-family:var(--mono);font-size:10px;letter-spacing:2.5px;color:var(--accent);
+font-weight:600;text-transform:uppercase;margin-bottom:14px}
+h1.doc-title{font-family:var(--serif-cjk);font-weight:700;font-size:clamp(26px,5vw,38px);
+line-height:1.3;letter-spacing:.01em}
+.doc-meta{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.5px;
+margin-top:14px;padding-bottom:8px}
+.callout{background:rgba(74,111,199,.07);border:.8px solid var(--accent-soft,#A5BBEF);
+border-left:3px solid var(--accent);padding:18px 20px;margin:24px 0 8px;
+font-size:14px;line-height:1.85;color:var(--ink)}
+.callout strong{color:var(--accent-deep)}
+.body{padding-top:8px}
+.body h1{font-family:var(--serif-cjk);font-weight:600;font-size:clamp(19px,3.4vw,23px);
+line-height:1.45;margin:40px 0 14px;padding-top:22px;border-top:.5px solid var(--hairline)}
+.body h2{font-family:var(--serif-cjk);font-weight:600;font-size:16px;
+color:var(--accent-deep);margin:26px 0 10px}
+.body p{margin:0 0 14px}
+.body ol,.body ul{margin:0 0 16px;padding-left:1.55em}
+.body li{margin:0 0 10px;padding-left:.2em}
+.body li::marker{color:var(--accent);font-variant-numeric:tabular-nums}
+.body li>p{margin:0 0 6px}
+.body strong{font-weight:700}
+.body a{color:var(--accent-deep);text-decoration:underline}
+.doc-foot{margin-top:48px;padding-top:20px;border-top:.5px solid var(--ink);
+font-size:12px;color:var(--muted);line-height:1.8}
+.doc-foot .accent{color:var(--accent-deep);font-weight:600}
+.en-jump{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.5px;color:var(--accent-deep);text-decoration:none;border:.8px solid var(--soft);padding:7px 14px;border-radius:999px;transition:.15s}
+.en-jump:hover{border-color:var(--accent);background:rgba(74,111,199,.07)}
+.lang-sep{border:none;border-top:1.5px solid var(--ink);margin:64px 0 0}
+.lang-en{padding-top:8px}
+.en-note{background:rgba(1,1,22,.04);border-left:3px solid var(--muted);padding:14px 18px;margin:28px 0 8px;font-size:13px;line-height:1.75;color:var(--muted)}
+.lang-en h1.en-title{font-family:var(--serif-cjk);font-weight:700;font-size:clamp(24px,4.6vw,34px);line-height:1.3;margin:24px 0 4px;padding-top:0;border-top:none}
+.en-sub{font-size:14px;color:var(--muted);margin:0 0 8px}
+.back-to-top{margin-top:44px;padding-top:18px;border-top:.5px solid var(--hairline);font-size:12px}
+.back-to-top a{color:var(--accent-deep);text-decoration:none}
+@media (max-width:560px){body{padding:0 16px;font-size:15px}.doc{padding:18px 0 80px}}
+</style>
+</head>
+<body>
+<div class="doc">
+ <div class="topbar">
+  <span class="brand"><img src="/assets/compound-mark.png" alt="Compound">Compound · 法律文件</span>
+  <a class="back" id="back-link" href="/">← 返回报名</a>
+ </div>
+ <div class="doc-head" id="top">
+  <p class="doc-overline">Compound · Legal</p>
+  <h1 class="doc-title">Compound 个人信息处理规则</h1>
+  <p class="doc-meta">版本 2026-05-20 · 北京衍灵科技有限公司</p>
+  <a class="en-jump" href="#english">English version ↓</a>
+ </div>
+ <div class="body">
+<p>(即隐私政策)</p>
+<aside class="callout"><strong>重要提示:</strong> 北京衍灵科技有限公司(以下简称"我们"或"Compound")深知个人信息对您的重要性,并将按照《中华人民共和国个人信息保护法》《中华人民共和国数据安全法》《中华人民共和国网络安全法》《中华人民共和国民法典》等法律法规的规定,依法、合理、必要地处理您的个人信息。请您在使用我们的服务或参加我们的活动前仔细阅读本规则,特别留意<strong>加粗字体</strong>标示的条款,以及其中关于<strong>敏感个人信息(医疗健康信息、生物样本相关信息、身份证件信息等)</strong>的处理说明。</aside>
+<h1 id="引言">引言</h1>
+<p><strong>本《个人信息处理规则》(以下简称"本规则"或"本政策")适用于您使用 Compound 网站、应用、小程序及参与 Compound 组织的健康检测活动的全部场景。</strong></p>
+<p>如您对本规则有任何疑问,可通过本规则第十三条所列联系方式与我们联系。</p>
+<h1 id="第一条-本规则适用对象">第一条 本规则适用对象</h1>
+<p>本规则适用于:</p>
+<ol>
+<li><p>通过 Compound 平台注册账户的用户;</p></li>
+<li><p>通过 Compound 平台报名并参加我们组织的健康检测活动的用户;</p></li>
+<li><p>通过 Compound 平台浏览、咨询或使用任何服务的用户。</p></li>
+</ol>
+<p>如您是未成年人或不具有完全民事行为能力,请勿使用本服务或参加我们的活动;详见第十一条。</p>
+<h1 id="第二条-我们处理的个人信息类型">第二条 我们处理的个人信息类型</h1>
+<p>根据您使用的服务和参与的活动,我们可能处理以下类型的个人信息:</p>
+<h2 id="一-基础注册与联系信息">(一) 基础注册与联系信息</h2>
+<ol>
+<li><p>姓名、性别、出生日期、手机号、电子邮箱;</p></li>
+<li><p>活动报名编号、订单编号、必要的身份核验信息。</p></li>
+</ol>
+<h2 id="二-身份信息">(二) 身份信息</h2>
+<p>如采血服务方或检测实验室基于实名管理、样本匹配或报告出具确有必要,我们可能收集您的<strong>身份证件号码或证件照片</strong>。如无强制必要,我们将优先采用姓名、联系方式、出生日期、性别、样本编号等方式进行身份匹配,遵循最小必要原则。</p>
+<h2 id="三-健康问卷信息">(三) 健康问卷信息</h2>
+<ol>
+<li><p>身高、体重、既往病史、过敏史、用药史、家族史;</p></li>
+<li><p>生活习惯、运动状况、饮食习惯、睡眠状况;</p></li>
+<li><p>采血禁忌或注意事项相关信息(如凝血状况、当前发热或感染、孕期/哺乳期等)。</p></li>
+</ol>
+<h2 id="四-生物样本相关信息及检测数据">(四) 生物样本相关信息及检测数据</h2>
+<ol>
+<li><p>本次采集的血液样本编号、采血时间、采血部位记录;</p></li>
+<li><p>检测项目、检测结果、参考区间、实验室报告及相关指标数据;</p></li>
+</ol>
+<p><strong>Compound 不留存血液样本本身。</strong>样本由采血服务方与检测服务方按其规范处理。</p>
+<h2 id="五-由-compound-生成的健康分析数据">(五) 由 Compound 生成的健康分析数据</h2>
+<ol>
+<li><p>基于检测数据生成的健康评分、生物年龄、风险提示、生活方式建议;</p></li>
+<li><p>解读报告、趋势分析、目标设定与跟踪数据。</p></li>
+</ol>
+<h2 id="六-使用日志与技术信息">(六) 使用日志与技术信息</h2>
+<ol>
+<li><p>您在 Compound 平台的访问、查看、下载、操作记录;</p></li>
+<li><p>设备型号、操作系统、浏览器类型、IP 地址、唯一设备标识符;</p></li>
+<li><p>Cookie 及类似技术产生的信息(详见本规则第九条)。</p></li>
+</ol>
+<h2 id="七-交易与支付信息">(七) 交易与支付信息</h2>
+<ol>
+<li><p>订单信息、支付状态、支付时间、支付渠道;</p></li>
+<li><p>发票申请信息(如您主动申请开具发票)。</p></li>
+</ol>
+<p>其中,<strong>身份证件信息、医疗健康信息、生物样本相关信息及检测数据属于《个人信息保护法》第二十八条定义的敏感个人信息</strong>。我们处理敏感个人信息将取得您的单独同意,并采取严格的保护措施。</p>
+<h1 id="第三条-我们处理个人信息的目的与方式">第三条 我们处理个人信息的目的与方式</h1>
+<h2 id="一-完成本次服务">(一) 完成本次服务</h2>
+<ol>
+<li><p>核验您的身份、完成报名、安排现场采血、样本匹配、实验室检测、数据回传、报告展示、健康信息分析;</p></li>
+<li><p>向您发送活动通知、提醒、报告生成提示与其他服务必要的消息;</p></li>
+<li><p>处理您的咨询、投诉、退款申请、争议解决等客户服务事项。</p></li>
+</ol>
+<h2 id="二-安全保障与质量控制">(二) 安全保障与质量控制</h2>
+<ol>
+<li><p>活动期间及活动后必要的安全保障、质量控制、风险监控;</p></li>
+<li><p>识别异常行为、防范欺诈、保护账户安全;</p></li>
+<li><p>合规留档与日志审计。</p></li>
+</ol>
+<h2 id="三-产品研究与改进">(三) 产品研究与改进</h2>
+<p><strong>经匿名化处理且无法识别特定个人、不能复原的统计数据,可用于产品研究、统计分析、模型改进和服务质量提升。</strong>若仅进行去标识化处理但仍可能重新识别特定个人,我们将在法律允许范围内、基于明确目的和必要范围进行处理,并采取额外安全措施;涉及超出本服务必要范围的用途时,将另行取得您的同意。</p>
+<h2 id="四-法律法规要求">(四) 法律法规要求</h2>
+<p>依据法律法规、监管要求或司法行政机关依法要求进行处理或提供。</p>
+<h1 id="第四条-个人信息的共享委托处理与对外提供">第四条 个人信息的共享、委托处理与对外提供</h1>
+<p>为完成本次服务,我们可能与以下各方共享或委托处理您的个人信息。我们将严格遵循最小必要原则,仅提供完成相应目的所必需的最少信息。</p>
+<h2 id="一-各方个人信息处理角色">(一) 各方个人信息处理角色</h2>
+<ol>
+<li><p>Compound 是报名信息、平台账号信息、订单信息、报告展示数据、健康分析数据及平台服务数据的个人信息处理者。</p></li>
+<li><p><strong>北京同和诊所(有限合伙)</strong>("同和诊所")作为采血服务方,可能就采血前问询、现场护理记录、采血安全管理、采血耗材和样本交接记录等信息<strong>独立承担个人信息处理者责任</strong>,或在合作协议约定范围内作为 Compound 的合作服务方处理完成采血所必需的信息。</p></li><li><p><strong>广州金域医学检验中心有限公司</strong>("广州金域")作为检测服务方,可能就样本接收、检测、实验室记录、检测报告和质量控制等信息<strong>独立承担个人信息处理者责任</strong>。</p></li>
+<li><p>云存储、短信、支付、客服、电子签名、物流或样本转运等供应商,通常作为受托处理者或必要服务提供方,仅在完成相应服务所必需的最小范围内处理个人信息。</p></li>
+</ol>
+<h2 id="二-向采血服务方共享的信息范围">(二) 向采血服务方共享的信息范围</h2>
+<p>我们可能向北京同和诊所(有限合伙)提供:</p>
+<ol>
+<li><p>姓名、性别、年龄/出生日期、手机号;</p></li>
+<li><p>活动场次、报名编号;</p></li>
+<li><p>必要的身份核验信息;</p></li>
+<li><p>采血前问询的关键信息(如凝血状况、用药史、过敏史等可能影响采血安全的信息)。</p></li>
+</ol>
+<p>目的:派遣符合执业要求的医护人员、完成现场身份核验、进行采血前风险评估与采血操作。</p>
+<h2 id="三-向检测服务方共享或委托的信息范围">(三) 向检测服务方共享或委托的信息范围</h2>
+<p>我们可能向广州金域医学检验中心有限公司提供:</p>
+<ol>
+<li><p>姓名、性别、年龄/出生日期;</p></li>
+<li><p>样本编号、采血时间、检测项目;</p></li>
+<li><p>必要的身份信息(用于报告出具与样本匹配);</p></li>
+<li><p>血液样本本身(由采血服务方按规范交接转运)。</p></li>
+</ol>
+<p>目的:完成本次约定的实验室检测项目,并向 Compound 回传检测数据。</p>
+<h2 id="四-向必要服务供应商共享的信息范围">(四) 向必要服务供应商共享的信息范围</h2>
+<p>我们可能向支付渠道、短信平台、云服务商、电子签名平台、客服系统等供应商提供完成其服务所必需的最低限度信息。我们与上述供应商签署有数据处理协议,要求其按本规则和适用法律处理个人信息。</p>
+<h2 id="五-其他共享情形">(五) 其他共享情形</h2>
+<p><strong>除本规则列明的情形、您另行单独同意或法律法规另有规定外,我们不会将您的个人信息提供给其他第三方。</strong></p>
+<p>在符合法律规定的情况下,我们也可能向有权机关披露相关信息,并在法律允许的范围内告知您。</p>
+<h1 id="第五条-敏感个人信息的单独同意">第五条 敏感个人信息的单独同意</h1>
+<p><strong>您在勾选"同意"本规则或相应的《知情同意书》时,即视为您单独、明确同意:</strong></p>
+<p>基于本次活动及后续服务的必要性,Compound、同和诊所、广州金域及其各自必要服务供应商,可以在本规则及相应《知情同意书》约定的目的和范围内收集、存储、使用、传输、提供和处理您的敏感个人信息,具体包括:</p>
+<ol>
+<li><p>身份证件信息(如身份证号码、证件照片);</p></li>
+<li><p>医疗健康信息(病史、用药史、过敏史、健康问卷等);</p></li>
+<li><p>生物样本相关信息(血液样本及由其衍生的检测数据)。</p></li>
+</ol>
+<p><strong>处理上述敏感个人信息对于完成本次活动是必要的;如您不同意,我们将无法为您提供本次服务。</strong></p>
+<h1 id="第六条-数据存储期限地点与安全">第六条 数据存储期限、地点与安全</h1>
+<h2 id="一-存储期限">(一) 存储期限</h2>
+<ol>
+<li><p>检测数据原则上保存至您主动注销账户后6个月内删除或匿名化,法律法规另有强制保留期限、争议解决或监管要求的除外;</p></li>
+<li><p>会计凭证、税务相关信息按相关法律保存期限保存;</p></li>
+<li><p>血液样本由采血服务方和/或广州金域按医学检验及样本管理规范处理、留存或销毁;Compound 不留存血液样本本身;</p></li>
+<li><p>如因技术限制、合规留档、备份系统或争议处理需要无法立即删除的,我们将停止除存储和必要安全保护外的其他处理,直至可删除或匿名化。</p></li>
+</ol>
+<h2 id="二-存储地点与跨境传输">(二) 存储地点与跨境传输</h2>
+<p>您的个人信息将存储在中华人民共和国境内,原则上不向境外传输。如未来因业务必要发生个人信息跨境传输,我们将按照《个人信息保护法》及相关规定取得您的单独同意并履行相应程序。</p>
+<h2 id="三-安全措施">(三) 安全措施</h2>
+<p>我们采取以下措施保护您的个人信息:</p>
+<ol>
+<li><p>数据传输加密、敏感信息存储加密;</p></li>
+<li><p>基于角色的访问控制与最小授权原则;</p></li>
+<li><p>操作日志记录与定期审计;</p></li>
+<li><p>权限隔离、生产环境与开发环境分离;</p></li>
+<li><p>供应商安全评估与合同约束;</p></li>
+<li><p>员工保密义务与定期培训。</p></li>
+</ol>
+<p>如发生或可能发生个人信息泄露、篡改、丢失等安全事件,<strong>我们将依法及时通知您并向监管机关报告。</strong></p>
+<h1 id="第七条-您的权利">第七条 您的权利</h1>
+<p>依照《个人信息保护法》等相关法律法规,您对您的个人信息享有以下权利:</p>
+<ol>
+<li><p>查阅、复制权:您有权查阅、复制您提交及由我们生成的个人信息。</p></li>
+<li><p>更正、补充权:发现信息不准确或不完整时,您可要求我们更正或补充。</p></li>
+<li><p>删除权:在法定情形下,您可要求我们删除您的个人信息。</p></li>
+<li><p>撤回同意权:您可以撤回此前给予我们的同意;撤回不影响撤回前基于您的同意已开展的处理活动效力。</p></li>
+<li><p>注销账户权:您可申请注销 Compound 账户。</p></li>
+<li><p>解释说明权:您有权要求我们对个人信息处理规则进行解释说明。</p></li>
+<li><p>对自动化决策的权利:对于健康评分、风险提示等自动化分析结果,您有权要求人工复核或说明。</p></li>
+<li><p>投诉、举报权:您有权向网信、市场监管等主管部门投诉、举报。</p></li>
+</ol>
+<p>您可通过本规则第十三条所列联系方式行使上述权利。<strong>我们将在 15 个工作日内回复,法律法规另有规定的除外。</strong></p>
+<h1 id="第八条-自动化决策与算法说明">第八条 自动化决策与算法说明</h1>
+<p>8.1 Compound 平台基于您的检测数据,结合公开科学文献、健康知识库和算法模型,向您输出健康评分、生物年龄、风险提示和生活方式建议。</p>
+<p>8.2 <strong>Compound 不会仅基于自动化决策作出对您个人权益有重大影响的决定。</strong>上述评分与提示仅为健康信息展示,<strong>不作为医疗诊断、保险核保、就业评估、信贷评估等可能对您或第三方产生重大权益影响的决策依据</strong>。</p>
+<p>8.3 您有权拒绝我们仅通过自动化决策方式作出对您具有显著影响的决定,并可要求我们提供人工复核或解释说明。</p>
+<h1 id="第九条-cookie-及类似技术">第九条 Cookie 及类似技术</h1>
+<p>9.1 Compound 平台可能使用 Cookie、本地存储、设备标识符等技术,用于:</p>
+<ol>
+<li><p>识别您的登录状态、保持会话;</p></li>
+<li><p>记住您的偏好设置;</p></li>
+<li><p>分析平台使用情况、改进用户体验;</p></li>
+<li><p>保障平台与账户安全。</p></li>
+</ol>
+<p>9.2 您可通过浏览器设置或设备设置管理或拒绝 Cookie;拒绝可能影响您使用某些功能。</p>
+<p>9.3 我们不会使用 Cookie 收集您的检测数据或敏感个人信息。</p>
+<h1 id="第十条-本规则的更新">第十条 本规则的更新</h1>
+<p>10.1 我们可能根据法律法规变化、业务发展、技术升级等情况修订本规则。重大变更将通过 Compound 平台显著位置公告、站内信、短信或电子邮件等方式通知您。</p>
+<p>10.2 涉及对您权益有重大影响的变更(如处理目的、敏感个人信息处理范围、共享对象、用户权利行使方式等的实质变更),<strong>我们将以更显著的方式通知您并重新征求您的同意。</strong></p>
+<p>10.3 您可在 Compound 平台查询本规则的最新版本及历史版本。</p>
+<h1 id="第十一条-未成年人保护">第十一条 未成年人保护</h1>
+<p><strong>Compound 平台与健康检测活动仅面向年满 18 周岁且具有完全民事行为能力的成年人。</strong>我们不会主动向未成年人提供服务,也不会主动收集未成年人的个人信息。</p>
+<p>如我们发现存在未经法定监护人同意而收集未成年人个人信息的情况,将立即删除相关数据并采取相应措施。如您是法定监护人,发现未成年人未经您同意使用我们的服务或提供其个人信息,请通过本规则第十三条所列联系方式联系我们。</p>
+<h1 id="第十二条-与其他文件的关系">第十二条 与其他文件的关系</h1>
+<p>本规则与 Compound 同时发布或单独签署的《用户服务协议》、各场活动专属的《知情同意书》共同构成完整约定。如发生冲突:</p>
+<ol>
+<li><p>个人信息处理事项以本规则及相应《知情同意书》中对用户权益保护更充分的约定为准;</p></li>
+<li><p>具体活动的特殊敏感个人信息处理事项以该活动的《知情同意书》为准;</p></li>
+<li><p>其他事项以《用户服务协议》为准。</p></li>
+</ol>
+<h1 id="第十三条-联系方式与投诉渠道">第十三条 联系方式与投诉渠道</h1>
+<p>如您对个人信息处理有任何疑问、意见、建议或投诉,可通过以下方式联系我们:</p>
+<p>公司名称: 北京衍灵科技有限公司</p>
+<p>注册地址: 北京市海淀区海淀大街甲36号5层5014号-1364号</p>
+<p><strong>个人信息保护负责人邮箱:</strong>siyu@compoundlife.ai / terry@compoundlife.ai</p>
+<p><strong>客户服务邮箱:</strong>hello@compoundlife.ai</p>
+<hr class="lang-sep">
+<section class="lang-en" id="english">
+<p class="en-note"><strong>English Translation (for reference only).</strong> The Chinese version above is the legally binding version. In the event of any inconsistency between the Chinese and English versions, the Chinese version shall prevail.</p>
+<h1 class="en-title">Compound Personal Information Processing Rules</h1>
+<p class="en-sub">(i.e., Privacy Policy)</p>
+
+<aside class="callout"><strong>IMPORTANT NOTICE:</strong> Beijing Yanling Technology Co., Ltd. ("we," "us," or "Compound") fully understands the importance of personal information to you, and will process your personal information lawfully, reasonably, and only as necessary, in accordance with the <em>Personal Information Protection Law of the People's Republic of China</em>, the <em>Data Security Law of the People's Republic of China</em>, the <em>Cybersecurity Law of the People's Republic of China</em>, the <em>Civil Code of the People's Republic of China</em>, and other laws and regulations. Please read these Rules carefully before using our services or participating in our events, paying particular attention to the clauses marked in <strong>bold</strong>, as well as the provisions on <strong>sensitive personal information (medical and health information, biological-sample-related information, identity document information, etc.)</strong>.</aside>
+
+<h1>Introduction</h1>
+<p><strong>These Personal Information Processing Rules (these "Rules" or this "Policy") apply to all scenarios in which you use the Compound website, applications, and mini-programs, and participate in health testing events organized by Compound.</strong></p>
+<p>If you have any questions about these Rules, you may contact us using the contact information listed in Article 13 of these Rules.</p>
+
+<h1>Article 1 — Persons to Whom These Rules Apply</h1>
+<p>These Rules apply to:</p>
+<ol>
+<li>users who register an account through the Compound platform;</li>
+<li>users who sign up for and participate in health testing events organized by us through the Compound platform;</li>
+<li>users who browse, make inquiries, or use any service through the Compound platform.</li>
+</ol>
+<p>If you are a minor or do not have full capacity for civil conduct, please do not use this service or participate in our events; see Article 11 for details.</p>
+
+<h1>Article 2 — Types of Personal Information We Process</h1>
+<p>Depending on the services you use and the events you participate in, we may process the following types of personal information:</p>
+<h2>(1) Basic Registration and Contact Information</h2>
+<ol>
+<li>name, gender, date of birth, mobile number, email address;</li>
+<li>event registration number, order number, and necessary identity-verification information.</li>
+</ol>
+<h2>(2) Identity Information</h2>
+<p>If the blood-collection service provider or testing laboratory genuinely requires it for real-name management, sample matching, or report issuance, we may collect your <strong>identity document number or document photo</strong>. Where not strictly necessary, we will preferentially use methods such as name, contact information, date of birth, gender, and sample number for identity matching, following the principle of minimum necessity.</p>
+<h2>(3) Health Questionnaire Information</h2>
+<ol>
+<li>height, weight, past medical history, allergy history, medication history, family history;</li>
+<li>lifestyle habits, exercise status, dietary habits, sleep status;</li>
+<li>information related to blood-collection contraindications or precautions (such as coagulation status, current fever or infection, pregnancy/lactation, etc.).</li>
+</ol>
+<h2>(4) Biological-Sample-Related Information and Testing Data</h2>
+<ol>
+<li>the number of the blood sample collected on this occasion, collection time, and collection-site records;</li>
+<li>testing items, testing results, reference ranges, laboratory reports, and related indicator data;</li>
+</ol>
+<p><strong>Compound does not retain the blood sample itself.</strong> The sample is handled by the blood-collection service provider and the testing service provider in accordance with their respective standards.</p>
+<h2>(5) Health Analysis Data Generated by Compound</h2>
+<ol>
+<li>health scores, biological age, risk indications, and lifestyle recommendations generated based on testing data;</li>
+<li>interpretive reports, trend analysis, goal-setting, and tracking data.</li>
+</ol>
+<h2>(6) Usage Logs and Technical Information</h2>
+<ol>
+<li>your access, viewing, download, and operation records on the Compound platform;</li>
+<li>device model, operating system, browser type, IP address, and unique device identifier;</li>
+<li>information generated by Cookies and similar technologies (see Article 9 of these Rules for details).</li>
+</ol>
+<h2>(7) Transaction and Payment Information</h2>
+<ol>
+<li>order information, payment status, payment time, and payment channel;</li>
+<li>invoice application information (if you proactively apply for an invoice).</li>
+</ol>
+<p>Among the above, <strong>identity document information, medical and health information, biological-sample-related information, and testing data are sensitive personal information as defined in Article 28 of the Personal Information Protection Law</strong>. We will obtain your separate consent for processing sensitive personal information and adopt strict protective measures.</p>
+
+<h1>Article 3 — Purposes and Means of Processing Personal Information</h1>
+<h2>(1) Completing This Service</h2>
+<ol>
+<li>verifying your identity, completing registration, arranging on-site blood collection, sample matching, laboratory testing, data transmission, report display, and health information analysis;</li>
+<li>sending you event notifications, reminders, report-generation prompts, and other messages necessary for the service;</li>
+<li>handling your inquiries, complaints, refund applications, dispute resolution, and other customer service matters.</li>
+</ol>
+<h2>(2) Security and Quality Control</h2>
+<ol>
+<li>necessary security, quality control, and risk monitoring during and after the event;</li>
+<li>identifying abnormal behavior, preventing fraud, and protecting account security;</li>
+<li>compliance record-keeping and log auditing.</li>
+</ol>
+<h2>(3) Product Research and Improvement</h2>
+<p><strong>Statistical data that has been anonymized so that it cannot identify a specific individual and cannot be restored may be used for product research, statistical analysis, model improvement, and service quality enhancement.</strong> If only de-identification is performed but a specific individual may still be re-identified, we will process it within the scope permitted by law, based on a clear purpose and a necessary scope, and adopt additional security measures; where the use exceeds the scope necessary for this service, we will separately obtain your consent.</p>
+<h2>(4) Requirements of Laws and Regulations</h2>
+<p>Processing or provision in accordance with laws and regulations, regulatory requirements, or the lawful requests of judicial or administrative authorities.</p>
+
+<h1>Article 4 — Sharing, Entrusted Processing, and External Provision of Personal Information</h1>
+<p>To complete this service, we may share or entrust the processing of your personal information with the following parties. We will strictly follow the principle of minimum necessity, providing only the minimum information necessary to accomplish the corresponding purpose.</p>
+<h2>(1) The Personal-Information-Processing Roles of Each Party</h2>
+<ol>
+<li>Compound is the personal information handler of registration information, platform account information, order information, report display data, health analysis data, and platform service data.</li>
+<li><strong>Beijing Tonghe Clinic (Limited Partnership)</strong> ("Tonghe Clinic"), as the blood-collection service provider, may, with respect to information such as pre-collection inquiries, on-site nursing records, blood-collection safety management, blood-collection consumables, and sample-handover records, <strong>independently bear the responsibility of a personal information handler</strong>, or, within the scope agreed in the cooperation agreement, process the information necessary to complete blood collection as Compound's cooperating service provider.</li>
+<li><strong>Guangzhou KingMed Medical Laboratory Center Co., Ltd.</strong> ("Guangzhou KingMed"), as the testing service provider, may, with respect to information such as sample receipt, testing, laboratory records, testing reports, and quality control, <strong>independently bear the responsibility of a personal information handler</strong>.</li>
+<li>Suppliers such as cloud storage, SMS, payment, customer service, electronic signature, logistics, or sample transport typically act as entrusted parties or necessary service providers, processing personal information only within the minimum scope necessary to accomplish the corresponding service.</li>
+</ol>
+<h2>(2) Scope of Information Shared with the Blood-Collection Service Provider</h2>
+<p>We may provide Beijing Tonghe Clinic (Limited Partnership) with:</p>
+<ol>
+<li>name, gender, age/date of birth, mobile number;</li>
+<li>event session and registration number;</li>
+<li>necessary identity-verification information;</li>
+<li>key information from the pre-collection inquiry (such as coagulation status, medication history, allergy history, and other information that may affect the safety of blood collection).</li>
+</ol>
+<p>Purpose: to dispatch medical personnel who meet practice requirements, complete on-site identity verification, and conduct pre-collection risk assessment and the blood-collection procedure.</p>
+<h2>(3) Scope of Information Shared with or Entrusted to the Testing Service Provider</h2>
+<p>We may provide Guangzhou KingMed Medical Laboratory Center Co., Ltd. with:</p>
+<ol>
+<li>name, gender, age/date of birth;</li>
+<li>sample number, collection time, testing items;</li>
+<li>necessary identity information (for report issuance and sample matching);</li>
+<li>the blood sample itself (handed over and transported by the blood-collection service provider in accordance with standards).</li>
+</ol>
+<p>Purpose: to complete the laboratory testing items agreed for this occasion and to transmit the testing data back to Compound.</p>
+<h2>(4) Scope of Information Shared with Necessary Service Suppliers</h2>
+<p>We may provide payment channels, SMS platforms, cloud service providers, electronic signature platforms, customer service systems, and other suppliers with the minimum information necessary to complete their services. We have signed data processing agreements with the above suppliers, requiring them to process personal information in accordance with these Rules and applicable law.</p>
+<h2>(5) Other Sharing Situations</h2>
+<p><strong>Except for the situations set out in these Rules, situations to which you separately consent, or as otherwise provided by laws and regulations, we will not provide your personal information to other third parties.</strong></p>
+<p>Where permitted by law, we may also disclose relevant information to authorized authorities, and will inform you to the extent permitted by law.</p>
+
+<h1>Article 5 — Separate Consent for Sensitive Personal Information</h1>
+<p><strong>When you check "I agree" to these Rules or the corresponding Informed Consent Form, you are deemed to separately and expressly consent that:</strong></p>
+<p>Based on the necessity of this event and subsequent services, Compound, Tonghe Clinic, Guangzhou KingMed, and their respective necessary service suppliers may, within the purposes and scope agreed in these Rules and the corresponding <em>Informed Consent Form</em>, collect, store, use, transmit, provide, and process your sensitive personal information, specifically including:</p>
+<ol>
+<li>identity document information (such as ID number and document photo);</li>
+<li>medical and health information (medical history, medication history, allergy history, health questionnaire, etc.);</li>
+<li>biological-sample-related information (the blood sample and the testing data derived from it).</li>
+</ol>
+<p><strong>Processing the above sensitive personal information is necessary to complete this event; if you do not agree, we will be unable to provide this service to you.</strong></p>
+
+<h1>Article 6 — Data Retention Period, Location, and Security</h1>
+<h2>(1) Retention Period</h2>
+<ol>
+<li>testing data will, in principle, be retained until deleted or anonymized within 6 months after you proactively deregister your account, except where laws and regulations provide for a mandatory retention period or where dispute resolution or regulatory requirements apply;</li>
+<li>accounting vouchers and tax-related information will be retained for the retention periods prescribed by the relevant laws;</li>
+<li>blood samples are handled, retained, or destroyed by the blood-collection service provider and/or Guangzhou KingMed in accordance with medical-testing and sample-management standards; Compound does not retain the blood sample itself;</li>
+<li>where immediate deletion is not possible due to technical limitations, compliance record-keeping, backup systems, or dispute-handling needs, we will cease all processing other than storage and necessary security protection until deletion or anonymization is possible.</li>
+</ol>
+<h2>(2) Storage Location and Cross-Border Transfer</h2>
+<p>Your personal information will be stored within the territory of the People's Republic of China and will, in principle, not be transferred abroad. If, in the future, a cross-border transfer of personal information becomes necessary for business reasons, we will obtain your separate consent and perform the corresponding procedures in accordance with the Personal Information Protection Law and relevant provisions.</p>
+<h2>(3) Security Measures</h2>
+<p>We adopt the following measures to protect your personal information:</p>
+<ol>
+<li>encryption of data in transit and encryption of sensitive information in storage;</li>
+<li>role-based access control and the principle of least privilege;</li>
+<li>operation logging and regular auditing;</li>
+<li>permission isolation and separation of production and development environments;</li>
+<li>supplier security assessments and contractual constraints;</li>
+<li>employee confidentiality obligations and regular training.</li>
+</ol>
+<p>If a security incident such as a leak, tampering, or loss of personal information occurs or may occur, <strong>we will promptly notify you and report to the regulatory authorities in accordance with the law.</strong></p>
+
+<h1>Article 7 — Your Rights</h1>
+<p>In accordance with the Personal Information Protection Law and other relevant laws and regulations, you have the following rights with respect to your personal information:</p>
+<ol>
+<li>Right to access and copy: you have the right to access and copy the personal information you submitted and the personal information we generated.</li>
+<li>Right to correct and supplement: if you find that information is inaccurate or incomplete, you may request that we correct or supplement it.</li>
+<li>Right to delete: under statutory circumstances, you may request that we delete your personal information.</li>
+<li>Right to withdraw consent: you may withdraw consent previously given to us; withdrawal does not affect the validity of processing activities already carried out based on your consent before withdrawal.</li>
+<li>Right to deregister your account: you may apply to deregister your Compound account.</li>
+<li>Right to explanation: you have the right to request that we explain the personal information processing rules.</li>
+<li>Rights regarding automated decision-making: for automated analysis results such as health scores and risk indications, you have the right to request human review or an explanation.</li>
+<li>Right to complain and report: you have the right to complain or report to the competent authorities such as cyberspace administration and market regulation authorities.</li>
+</ol>
+<p>You may exercise the above rights using the contact information listed in Article 13 of these Rules. <strong>We will respond within 15 business days, except as otherwise provided by laws and regulations.</strong></p>
+
+<h1>Article 8 — Automated Decision-Making and Algorithm Disclosure</h1>
+<p>8.1 Based on your testing data, and combining publicly available scientific literature, a health knowledge base, and algorithmic models, the Compound platform outputs health scores, biological age, risk indications, and lifestyle recommendations to you.</p>
+<p>8.2 <strong>Compound will not make any decision that has a material impact on your personal rights and interests based solely on automated decision-making.</strong> The above scores and indications are health information displays only and <strong>are not used as a basis for decisions that may have a material impact on you or third parties, such as medical diagnosis, insurance underwriting, employment assessment, or credit assessment</strong>.</p>
+<p>8.3 You have the right to refuse a decision that has a significant impact on you made by us solely through automated decision-making, and may request that we provide human review or an explanation.</p>
+
+<h1>Article 9 — Cookies and Similar Technologies</h1>
+<p>9.1 The Compound platform may use technologies such as Cookies, local storage, and device identifiers to:</p>
+<ol>
+<li>recognize your login status and maintain your session;</li>
+<li>remember your preference settings;</li>
+<li>analyze platform usage and improve user experience;</li>
+<li>safeguard platform and account security.</li>
+</ol>
+<p>9.2 You may manage or refuse Cookies through your browser settings or device settings; refusal may affect your use of certain functions.</p>
+<p>9.3 We will not use Cookies to collect your testing data or sensitive personal information.</p>
+
+<h1>Article 10 — Updates to These Rules</h1>
+<p>10.1 We may revise these Rules in response to changes in laws and regulations, business development, technical upgrades, and the like. Material changes will be notified to you by means such as a prominent announcement on the Compound platform, in-app message, SMS, or email.</p>
+<p>10.2 For changes that have a material impact on your rights and interests (such as substantive changes to the processing purpose, the scope of sensitive-personal-information processing, the sharing recipients, or the means of exercising user rights), <strong>we will notify you in a more prominent manner and obtain your consent again.</strong></p>
+<p>10.3 You may view the latest version and historical versions of these Rules on the Compound platform.</p>
+
+<h1>Article 11 — Protection of Minors</h1>
+<p><strong>The Compound platform and health testing events are intended only for adults who are at least 18 years old and have full capacity for civil conduct.</strong> We do not proactively provide services to minors, nor do we proactively collect minors' personal information.</p>
+<p>If we discover that we have collected a minor's personal information without the consent of their legal guardian, we will immediately delete the relevant data and take corresponding measures. If you are a legal guardian and discover that a minor has used our services or provided their personal information without your consent, please contact us using the contact information listed in Article 13 of these Rules.</p>
+
+<h1>Article 12 — Relationship with Other Documents</h1>
+<p>These Rules, together with the <em>User Service Agreement</em> and the event-specific <em>Informed Consent Form</em> published or separately signed by Compound at the same time, constitute the complete agreement. In the event of any conflict:</p>
+<ol>
+<li>personal-information-processing matters are governed by whichever of these Rules and the corresponding <em>Informed Consent Form</em> more fully protects the user's rights and interests;</li>
+<li>matters concerning the processing of sensitive personal information specific to a particular event are governed by that event's <em>Informed Consent Form</em>;</li>
+<li>other matters are governed by the <em>User Service Agreement</em>.</li>
+</ol>
+
+<h1>Article 13 — Contact Information and Complaint Channels</h1>
+<p>If you have any questions, comments, suggestions, or complaints regarding the processing of personal information, you may contact us by:</p>
+<p>Company name: Beijing Yanling Technology Co., Ltd. (北京衍灵科技有限公司)</p>
+<p>Registered address: Room 5014-1364, 5th Floor, No. 36A Haidian Street, Haidian District, Beijing (北京市海淀区海淀大街甲36号5层5014号-1364号)</p>
+<p><strong>Personal information protection officer email:</strong> siyu@compoundlife.ai / terry@compoundlife.ai</p>
+<p><strong>Customer service email:</strong> hello@compoundlife.ai</p>
+<p class="back-to-top"><a href="#top">↑ 返回中文版顶部 · Back to top</a></p>
+</section>
+
+ </div>
+ <div class="doc-foot">
+  本文件由 <span class="accent">北京衍灵科技有限公司</span> 提供并对其内容负责 ·
+  如有疑问请联系 <span class="accent">hello@compoundlife.ai</span>
+ </div>
+</div>
+<script>
+// In a new tab, "返回报名" goes back / home. Hide it when embedded in the RSVP modal.
+(function(){
+  var back=document.getElementById('back-link');
+  if(window.top!==window.self){ if(back) back.style.display='none'; return; }
+  if(back) back.addEventListener('click',function(e){
+    if(history.length>1){ e.preventDefault(); history.back(); }
+  });
+})();
+</script>
+</body>
+</html>

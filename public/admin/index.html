@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>預約後台 · Compound RSVP Admin</title>
+<meta name="robots" content="noindex">
+<style>
+  :root{--bg:#EFE9DD;--surface:#FBF7EC;--ink:#010116;--accent:#4A6FC7;--accent-deep:#2E4FA4;
+    --muted:rgba(1,1,22,.55);--soft:rgba(1,1,22,.18);--hairline:rgba(1,1,22,.12);--danger:#A0392B;--ok:#2f7d4f;
+    --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:"Manrope","Noto Sans TC","PingFang TC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    --serif:"Noto Serif TC","Songti TC","Songti SC","STSong",serif;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.5;padding:28px 22px 80px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1100px;margin:0 auto}
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:24px}
+  h1{font-family:var(--serif);font-size:24px;font-weight:600}
+  h1 small{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;color:var(--muted);display:block;margin-top:6px;font-weight:400}
+  .actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .btn{font:inherit;font-size:12px;letter-spacing:.5px;padding:9px 16px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;text-decoration:none;transition:.15s}
+  .btn:hover{background:var(--ink);color:var(--bg)}
+  .btn.primary{background:var(--ink);color:var(--bg)}
+  .btn.primary:hover{background:var(--accent-deep);border-color:var(--accent-deep)}
+  .meta{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.5px}
+  .summary{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+  .stat{background:var(--surface);border:1px solid var(--hairline);padding:14px 18px;min-width:140px}
+  .stat .n{font-family:var(--mono);font-size:26px;font-weight:600}
+  .stat .l{font-size:11px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin-top:2px}
+  .section-title{font-family:var(--mono);font-size:11px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin:28px 0 12px}
+  .slots{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+  .slotcard{background:var(--surface);border:1px solid var(--hairline);padding:12px 10px;text-align:center}
+  .slotcard.full{border-color:var(--danger)}
+  .slotcard .t{font-family:var(--mono);font-size:14px;font-weight:600}
+  .slotcard .c{font-size:11px;color:var(--muted);margin-top:6px}
+  .slotcard.full .c{color:var(--danger);font-weight:600}
+  .bar{height:4px;background:var(--hairline);margin-top:8px;position:relative;overflow:hidden}
+  .bar span{position:absolute;left:0;top:0;bottom:0;background:var(--accent)}
+  .slotcard.full .bar span{background:var(--danger)}
+  table{width:100%;border-collapse:collapse;margin-top:6px;background:var(--surface);font-size:13px}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--hairline);vertical-align:top}
+  th{font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);background:rgba(1,1,22,.03);position:sticky;top:0}
+  td.mono,th.mono{font-family:var(--mono)}
+  tr:hover td{background:rgba(74,111,199,.05)}
+  .ref{font-family:var(--mono);color:var(--accent-deep);font-weight:600;letter-spacing:.5px}
+  .cy{color:var(--ok);font-weight:700}
+  .cn{color:var(--danger);font-weight:700}
+  .empty{padding:48px;text-align:center;color:var(--muted);background:var(--surface);border:1px solid var(--hairline)}
+  .err{padding:16px;border:1px solid var(--danger);background:rgba(160,57,43,.06);color:var(--danger);margin-bottom:20px}
+  @media(max-width:760px){.slots{grid-template-columns:repeat(3,1fr)}.table-scroll{overflow-x:auto}table{min-width:720px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>預約後台<small>COMPOUND × MUSHANGHAI · FROM THE FUTURE</small></h1>
+    <div class="actions">
+      <span class="meta" id="updated">—</span>
+      <button class="btn" id="refresh">刷新 Refresh</button>
+      <a class="btn primary" href="/api/admin/export">下載 CSV</a>
+    </div>
+  </header>
+
+  <div id="err" class="err" style="display:none"></div>
+
+  <div class="summary">
+    <div class="stat"><div class="n" id="s-booked">—</div><div class="l">已預約 Booked</div></div>
+    <div class="stat"><div class="n" id="s-cap">—</div><div class="l">總名額 Capacity</div></div>
+    <div class="stat"><div class="n" id="s-left">—</div><div class="l">剩餘 Remaining</div></div>
+    <div class="stat"><div class="n" id="s-full">—</div><div class="l">已滿時段 Full slots</div></div>
+  </div>
+
+  <div class="section-title">時段滿座情況 · Slot fill</div>
+  <div class="slots" id="slots"></div>
+
+  <div class="section-title">預約名單 · Registrations (<span id="count">0</span>)</div>
+  <div class="table-scroll">
+    <table id="table">
+      <thead><tr>
+        <th>#</th><th>時段 Slot</th><th>姓名 Name</th><th>性別</th><th>出生 Birth</th>
+        <th>電郵 Email</th><th>電話 Phone</th><th class="mono">預約碼 Ref</th><th>提交時間</th><th>同意 Consent</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <div class="empty" id="empty" style="display:none">尚無預約 · No registrations yet</div>
+</div>
+
+<script>
+  var tbody=document.getElementById('tbody'), table=document.getElementById('table'), empty=document.getElementById('empty');
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+  function fmt(iso){ try{ var d=new Date(iso); if(isNaN(d)) return iso; var p=function(n){return (n<10?'0':'')+n;}; return p(d.getMonth()+1)+'-'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes()); }catch(e){ return iso; } }
+
+  function load(){
+    fetch('/api/admin/bookings',{cache:'no-store'}).then(function(r){
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.json();
+    }).then(function(d){
+      document.getElementById('err').style.display='none';
+      var booked=d.totals.booked, cap=d.totals.capacity;
+      document.getElementById('s-booked').textContent=booked;
+      document.getElementById('s-cap').textContent=cap;
+      document.getElementById('s-left').textContent=Math.max(0,cap-booked);
+      document.getElementById('s-full').textContent=d.slots.filter(function(s){return s.remaining<=0;}).length;
+      document.getElementById('count').textContent=d.bookings.length;
+
+      var sl=d.slots.map(function(s){
+        var pct=s.capacity?Math.round(s.booked/s.capacity*100):0, full=s.remaining<=0;
+        return '<div class="slotcard'+(full?' full':'')+'"><div class="t">'+esc(s.time)+'</div>'+
+          '<div class="c">'+s.booked+' / '+s.capacity+(full?' · 滿':'')+'</div>'+
+          '<div class="bar"><span style="width:'+pct+'%"></span></div></div>';
+      }).join('');
+      document.getElementById('slots').innerHTML=sl;
+
+      if(d.bookings.length===0){ table.style.display='none'; empty.style.display='block'; }
+      else{
+        table.style.display=''; empty.style.display='none';
+        tbody.innerHTML=d.bookings.map(function(b,i){
+          var c=b.consent||{};
+          var cCell=c.all
+            ? '<span class="cy">✓</span> <span class="meta" title="IP '+esc(c.ip||'—')+'">'+esc(c.version||'')+'</span>'
+            : '<span class="cn">✗</span>';
+          return '<tr><td class="mono">'+(i+1)+'</td><td class="mono">'+esc(b.slot)+'</td><td>'+esc(b.name)+'</td>'+
+            '<td>'+(b.gender==='female'?'女':'男')+'</td><td class="mono">'+esc(b.birth)+'</td>'+
+            '<td>'+esc(b.email)+'</td><td class="mono">'+esc(b.phone)+'</td>'+
+            '<td><span class="ref">'+esc(b.ref)+'</span></td><td class="mono">'+esc(fmt(b.createdAt))+'</td>'+
+            '<td>'+cCell+'</td></tr>';
+        }).join('');
+      }
+      var now=new Date();
+      document.getElementById('updated').textContent='更新於 '+('0'+now.getHours()).slice(-2)+':'+('0'+now.getMinutes()).slice(-2)+':'+('0'+now.getSeconds()).slice(-2);
+    }).catch(function(e){
+      var box=document.getElementById('err'); box.style.display='block'; box.textContent='載入失敗 Load failed: '+e.message;
+    });
+  }
+  document.getElementById('refresh').addEventListener('click',load);
+  load();
+  setInterval(load,20000);
+</script>
+</body>
+</html>

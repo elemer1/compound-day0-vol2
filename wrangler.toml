@@ -1,0 +1,11 @@
+name = "compound-rsvp"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "public"
+
+# D1 database binding. After you run `wrangler d1 create compound-rsvp-db`,
+# paste the printed database_id below (only needed for remote/production).
+# Local dev (`npm run dev`) works with the placeholder.
+[[d1_databases]]
+binding = "DB"
+database_name = "compound-rsvp-db"
+database_id = "aeaeb79f-178d-4465-825e-5e715eed5072"

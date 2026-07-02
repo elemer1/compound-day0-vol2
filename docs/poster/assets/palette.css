@@ -1,0 +1,20 @@
+/* Compound — blue system (replaces the older amber/reeded-glass palette).
+   Same structural roles as the old amber tokens (ink -> glow accent -> paper),
+   recolored around Compound's brand blue. Sampled/derived from the blue duotone
+   photography in Mask group original.png + the brand color swatch (black, charcoal,
+   ice-white, white, sky blue). */
+:root{
+  --ink:        #06070A;   /* deepest black — foot of the poster / silhouette black */
+  --glass-dark: #10131C;   /* dark glass body, near-black with a hair of blue */
+  --text-ink:   #12161F;   /* near-black cool ink for headline text on light fields */
+  --indigo:     #16224A;   /* deep structural blue, mid-dark */
+  --cobalt:     #2A4FE0;   /* rich saturated accent blue — the "ember" equivalent */
+  --cobalt-hot: #3F6BFF;   /* hottest/brightest crest of the accent */
+  --cyan-glow:  #6FD3E8;   /* backlit cyan-blue glow, sampled from the photo's mesh screen */
+  --ice:        #E7EEF2;   /* cool paper / ivory equivalent */
+  --paper:      #F4F7F8;   /* lightest, brightest field */
+  --slate:      #7C8794;   /* muted cool-gray label tone */
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --serif: 'Noto Serif TC','Songti SC',serif;
+  --sans: 'IBM Plex Sans','Noto Sans TC',sans-serif;
+}

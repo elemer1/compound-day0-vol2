@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>未來人 Day 0 · 上海 Vol.2 · 報名登記</title>
+<meta name="description" content="Compound「未來人 Day 0」— 科學驅動的 longevity 生活方式早餐會。2026.07.11 上海。生物標誌基線檢測、前沿科學分享、同道沙龍。設定你的 t=0，開始生命複利。">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#06070A">
+<meta property="og:title" content="未來人 Day 0 · Compound · 上海 Vol.2">
+<meta property="og:description" content="設定你的 t=0，開始生命複利。2026.07.11 上海 · 科學驅動的 longevity 生活方式早餐會。">
+<meta property="og:image" content="/assets/day0/poster-v8-blue-portrait.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="/assets/compound-mark.png">
+<style>
+:root{
+  --ink:#06070A;
+  --glass-dark:#10131C;
+  --text-ink:#12161F;
+  --indigo:#16224A;
+  --cobalt:#2A4FE0;
+  --cobalt-hot:#3F6BFF;
+  --cyan-glow:#6FD3E8;
+  --ice:#E7EEF2;
+  --paper:#F4F7F8;
+  --slate:#7C8794;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+  --serif:'Noto Serif TC','Songti SC',serif;
+  --sans:'IBM Plex Sans','Noto Sans TC',sans-serif;
+  --hairline: rgba(244,247,248,0.14);
+  --hairline-cyan: rgba(111,211,232,0.28);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:var(--ink);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+::selection{background:var(--cobalt-hot);color:var(--paper)}
+a{color:inherit}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+
+/* ===== background grid ===== */
+.console-bg{
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(244,247,248,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244,247,248,0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  -webkit-mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, black 40%, transparent 90%);
+  mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, black 40%, transparent 90%);
+}
+
+/* ===== reticle motif ===== */
+.reticle{
+  position:relative;
+  display:inline-block;
+  width:9px; height:9px;
+  border:1px solid var(--cyan-glow);
+  flex:none;
+}
+.reticle::after{
+  content:"";
+  position:absolute; top:50%; left:50%;
+  width:2px; height:2px;
+  background:var(--cyan-glow);
+  transform:translate(-50%,-50%);
+}
+.reticle.paper{border-color:var(--paper)}
+.reticle.paper::after{background:var(--paper)}
+.reticle.nested::before{
+  content:"";
+  position:absolute; top:2px; left:2px; right:2px; bottom:2px;
+  border:1px solid var(--cyan-glow);
+  opacity:.6;
+}
+
+.corner-brackets{position:absolute; inset:0; pointer-events:none;}
+.corner-brackets i{
+  position:absolute; width:12px; height:12px;
+  border:1px solid var(--hairline-cyan);
+}
+.corner-brackets i.tl{top:-1px; left:-1px; border-right:none; border-bottom:none}
+.corner-brackets i.tr{top:-1px; right:-1px; border-left:none; border-bottom:none}
+.corner-brackets i.bl{bottom:-1px; left:-1px; border-right:none; border-top:none}
+.corner-brackets i.br{bottom:-1px; right:-1px; border-left:none; border-top:none}
+
+/* ===== top bar ===== */
+.topbar{
+  position:sticky; top:0; z-index:100;
+  background:rgba(6,7,10,0.86);
+  backdrop-filter:blur(10px) saturate(140%);
+  -webkit-backdrop-filter:blur(10px) saturate(140%);
+  border-bottom:1px solid var(--hairline);
+}
+.topbar-inner{
+  max-width:1180px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 20px; gap:16px;
+}
+.brand-lockup{display:flex; align-items:center; gap:9px; flex:none}
+.brand-chip{
+  width:21px; height:21px; border-radius:50%;
+  background:rgba(244,247,248,0.94);
+  display:flex; align-items:center; justify-content:center;
+  flex:none;
+}
+.brand-chip img{width:60%; height:60%; object-fit:contain}
+.brand-word{
+  font-family:var(--sans); text-transform:uppercase;
+  letter-spacing:0.16em; font-size:10px; color:var(--paper); font-weight:500;
+  white-space:nowrap;
+}
+.brand-date{
+  font-family:var(--mono); font-size:9.5px; color:var(--slate);
+  letter-spacing:0.08em; margin-left:6px; padding-left:9px;
+  border-left:1px solid var(--hairline); white-space:nowrap;
+  display:none;
+}
+.jump-nav{
+  display:flex; align-items:center; gap:0;
+  font-family:var(--mono); font-size:10px; letter-spacing:0.09em;
+  overflow-x:auto; scrollbar-width:none;
+}
+.jump-nav::-webkit-scrollbar{display:none}
+.jump-nav a{
+  color:var(--slate); text-decoration:none; white-space:nowrap;
+  padding:6px 11px; border-right:1px solid var(--hairline);
+  transition:color .2s ease;
+}
+.jump-nav a:last-child{border-right:none}
+.jump-nav a:hover, .jump-nav a:focus-visible{color:var(--cyan-glow)}
+.jump-nav a b{color:var(--cobalt-hot); font-weight:500; margin-right:3px}
+@media (min-width:720px){ .brand-date{display:inline} }
+@media (max-width:900px){ .jump-nav{display:none} }
+
+/* mobile index toggle */
+.mobile-index-btn{
+  display:none; font-family:var(--mono); font-size:10px; letter-spacing:.09em;
+  color:var(--cyan-glow); background:transparent; border:1px solid var(--hairline-cyan);
+  padding:6px 10px; white-space:nowrap;
+}
+@media (max-width:900px){ .mobile-index-btn{display:inline-block} }
+
+/* ===== layout shell ===== */
+.shell{position:relative; z-index:1; max-width:1180px; margin:0 auto; padding:0 20px}
+.ruler-top, .ruler-bottom{height:1px; background:var(--hairline); margin:0 20px}
+section{padding:56px 0; border-bottom:1px solid var(--hairline); position:relative}
+section:last-of-type{border-bottom:none}
+@media (max-width:640px){ section{padding:40px 0} }
+
+.eyebrow{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:0.14em;
+  color:var(--cyan-glow); text-transform:uppercase;
+  display:flex; align-items:center; gap:8px; margin-bottom:14px;
+}
+.section-index{
+  font-family:var(--mono); font-size:10px; letter-spacing:.12em; color:var(--slate);
+  text-transform:uppercase; display:flex; align-items:center; gap:8px; margin-bottom:18px;
+}
+.section-index b{color:var(--cobalt-hot); font-weight:500}
+
+/* panel = bordered instrument card */
+.panel{
+  position:relative;
+  border:1px solid var(--hairline);
+  background:linear-gradient(180deg, rgba(244,247,248,0.02), rgba(244,247,248,0));
+  padding:28px 24px 30px;
+  margin-bottom:28px;
+}
+.panel:last-child{margin-bottom:0}
+.panel-header{
+  display:flex; align-items:center; gap:10px;
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--ice); margin-bottom:22px; padding-bottom:14px; border-bottom:1px solid var(--hairline);
+}
+.panel-header .reticle{margin-top:1px}
+.panel-header .tag{color:var(--slate)}
+@media (max-width:640px){ .panel{padding:22px 16px 24px} }
+
+/* ===== hero ===== */
+.hero-top{padding-top:38px}
+.hero-kicker{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.13em; color:var(--slate);
+  text-transform:uppercase; display:flex; align-items:center; gap:8px; margin-bottom:22px; flex-wrap:wrap;
+}
+.hero-grid{
+  display:grid; grid-template-columns: 1.05fr 0.95fr; gap:40px; align-items:start;
+}
+@media (max-width:900px){ .hero-grid{grid-template-columns:1fr; gap:30px} }
+
+.hero-title{
+  font-family:var(--serif); font-weight:700;
+  font-size:clamp(40px, 7vw, 74px);
+  line-height:1.06; letter-spacing:.01em; color:var(--paper);
+  margin-bottom:10px;
+}
+.hero-sub{
+  font-family:var(--mono); font-size:12px; letter-spacing:.1em; color:var(--cyan-glow);
+  margin-bottom:26px;
+}
+.tagline-cjk{
+  font-family:var(--serif); font-size:clamp(19px,2.6vw,25px); font-weight:500;
+  line-height:1.55; color:var(--paper); margin-bottom:8px;
+}
+.tagline-en{
+  font-family:var(--sans); font-size:13.5px; color:var(--slate); line-height:1.7; max-width:46ch;
+}
+.t0{
+  color:var(--cobalt-hot); font-style:italic; font-family:var(--mono); font-weight:600;
+  text-shadow:0 0 14px rgba(63,107,255,0.55), 0 0 28px rgba(111,211,232,0.25);
+}
+
+.intro-block{margin-top:30px; max-width:60ch}
+.intro-cjk{font-size:14.5px; line-height:1.95; color:var(--ice); margin-bottom:14px}
+.intro-en{font-size:12.5px; line-height:1.85; color:var(--slate)}
+
+/* specimen photo frame */
+.specimen-frame{
+  position:relative;
+  border:1px solid var(--hairline-cyan);
+  padding:10px;
+}
+.specimen-inner{
+  position:relative; overflow:hidden;
+  aspect-ratio:4/5;
+  background:var(--glass-dark);
+}
+.specimen-inner img{
+  width:100%; height:100%; object-fit:cover; object-position:center 15%;
+  filter:saturate(1.05);
+}
+.specimen-scrim-top{
+  position:absolute; top:0; left:0; right:0; height:28%;
+  background:linear-gradient(180deg, rgba(6,7,10,0.75), transparent);
+}
+.specimen-scrim-bottom{
+  position:absolute; bottom:0; left:0; right:0; height:44%;
+  background:linear-gradient(0deg, var(--ink), transparent);
+}
+.specimen-frame .corner-brackets i{
+  width:16px; height:16px; border-color:var(--cyan-glow); opacity:.85;
+}
+.specimen-label{
+  position:absolute; top:14px; left:14px;
+  font-family:var(--mono); font-size:9px; letter-spacing:.1em; color:var(--ice);
+  text-transform:uppercase; background:rgba(6,7,10,0.55); padding:4px 8px;
+  border:1px solid var(--hairline-cyan);
+}
+.floating-tag{
+  position:absolute;
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.08em; color:var(--paper);
+  text-transform:uppercase; display:flex; align-items:center; gap:6px;
+  background:rgba(6,7,10,0.6); padding:5px 9px;
+  border:1px solid var(--hairline-cyan);
+  backdrop-filter:blur(3px);
+}
+.floating-tag .reticle{width:7px; height:7px}
+.tag-see{bottom:16%; left:12px}
+.tag-understand{top:32%; right:12px}
+.tag-compound{bottom:6%; right:12px}
+@media (max-width:900px){
+  .floating-tag{font-size:8.5px; padding:4px 7px}
+}
+
+/* ===== spec table (見知行復) ===== */
+.spec-table{width:100%; border-collapse:collapse}
+.spec-row{
+  display:grid; grid-template-columns: 52px 1fr auto; gap:16px; align-items:center;
+  padding:16px 4px; border-bottom:1px solid var(--hairline);
+}
+.spec-row:last-child{border-bottom:none}
+.spec-glyph{
+  font-family:var(--serif); font-size:30px; font-weight:600; color:var(--paper);
+  text-shadow:0 0 16px rgba(111,211,232,0.4), 0 0 6px rgba(63,107,255,0.5);
+  line-height:1;
+}
+.spec-word{
+  font-family:var(--mono); font-size:12.5px; letter-spacing:.09em; color:var(--paper);
+  text-transform:uppercase; margin-bottom:4px;
+}
+.spec-gloss{font-size:12.5px; color:var(--slate)}
+.spec-idx{font-family:var(--mono); font-size:10px; color:var(--slate); text-align:right; white-space:nowrap}
+
+/* ===== agenda table ===== */
+.agenda-table{width:100%}
+.agenda-row{
+  display:grid; grid-template-columns: 96px 16px 1fr; gap:14px;
+  padding:16px 4px; border-bottom:1px solid var(--hairline); position:relative;
+}
+.agenda-row:last-child{border-bottom:none}
+.agenda-time{
+  font-family:var(--mono); font-size:12px; color:var(--cyan-glow); text-align:right;
+  letter-spacing:.03em; padding-top:1px; white-space:nowrap;
+}
+.agenda-tick{display:flex; align-items:flex-start; justify-content:center; padding-top:3px}
+.agenda-title-cjk{font-size:13.5px; color:var(--paper); font-weight:500; margin-bottom:4px; line-height:1.5}
+.agenda-title-en{font-size:11.5px; color:var(--slate); line-height:1.6}
+.agenda-vline{
+  position:absolute; left:112px; top:0; bottom:0; width:1px; background:var(--hairline-cyan);
+}
+@media (max-width:560px){
+  .agenda-row{grid-template-columns:70px 14px 1fr; gap:10px}
+  .agenda-vline{left:80px}
+  .agenda-time{font-size:10.5px}
+}
+
+.faculty-line{font-size:13px; color:var(--ice); line-height:2; margin-bottom:10px}
+.faculty-creds{font-family:var(--mono); font-size:10.5px; color:var(--slate); letter-spacing:.04em; line-height:1.9}
+
+.logistics-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:4px}
+@media (max-width:640px){ .logistics-grid{grid-template-columns:1fr; gap:16px} }
+.logistics-item{border-left:2px solid var(--hairline-cyan); padding-left:14px}
+.logistics-label{font-family:var(--mono); font-size:10px; letter-spacing:.1em; color:var(--slate); text-transform:uppercase; margin-bottom:6px}
+.logistics-value{font-size:13.5px; color:var(--paper); line-height:1.6}
+
+/* ===== pricing table ===== */
+.price-table{width:100%; border-collapse:collapse; font-size:12.5px}
+.price-table thead th{
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); text-align:left; font-weight:500; padding:0 10px 12px; border-bottom:1px solid var(--hairline);
+}
+.price-table tbody td{padding:14px 10px; border-bottom:1px solid var(--hairline); vertical-align:top; color:var(--ice)}
+.price-table tbody tr{position:relative; transition:background .25s ease}
+.price-table tbody tr.active-tier{background:rgba(63,107,255,0.08)}
+.price-table tbody tr.active-tier::before{
+  content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--cobalt-hot);
+  box-shadow:0 0 10px rgba(63,107,255,0.7);
+}
+.price-table .tier-name{font-family:var(--mono); font-size:11.5px; color:var(--paper); letter-spacing:.04em}
+.price-table .tier-note{color:var(--slate); font-size:11px}
+.price-table td.num{font-family:var(--mono); color:var(--paper)}
+.price-table td.num.locked{color:var(--slate); letter-spacing:.25em}
+@media (max-width:720px){
+  .price-table{font-size:11px}
+  .price-table thead{display:none}
+  .price-table, .price-table tbody, .price-table tr, .price-table td{display:block; width:100%}
+  .price-table tbody tr{border:1px solid var(--hairline); margin-bottom:10px; padding:12px 10px}
+  .price-table tbody tr.active-tier{border-color:var(--cobalt-hot)}
+  .price-table tbody td{border-bottom:none; padding:4px 0}
+  .price-table td::before{content:attr(data-label); display:block; font-family:var(--mono); font-size:9px; color:var(--slate); letter-spacing:.08em; text-transform:uppercase; margin-bottom:2px}
+}
+
+.perk-note{
+  margin-top:18px; font-size:12px; color:var(--slate); line-height:1.8;
+  border:1px dashed var(--hairline-cyan); padding:14px 16px;
+}
+.perk-note b{color:var(--cyan-glow); font-weight:500}
+
+/* ===== intake form ===== */
+.field{margin-bottom:22px; position:relative}
+.field-label{
+  display:flex; align-items:baseline; gap:8px; margin-bottom:9px;
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--slate);
+}
+.field-label b{color:var(--cobalt-hot); font-weight:600}
+.field-label .opt{color:var(--slate); font-weight:400; text-transform:none; letter-spacing:0; font-family:var(--sans)}
+.field-input-wrap{position:relative}
+input[type=text], input[type=tel], textarea{
+  width:100%; background:rgba(244,247,248,0.03); border:1px solid var(--hairline);
+  color:var(--paper); font-family:var(--sans); font-size:14.5px; padding:12px 13px;
+  outline:none; transition:border-color .2s ease, background .2s ease;
+}
+textarea{resize:vertical; min-height:74px; font-family:var(--sans)}
+input::placeholder, textarea::placeholder{color:var(--slate); opacity:.75}
+input:focus, textarea:focus{border-color:rgba(63,107,255,0.4); background:rgba(63,107,255,0.045)}
+
+/* reticle focus brackets */
+.reticle-focus{
+  position:absolute; inset:-1px; pointer-events:none;
+}
+.reticle-focus i{
+  position:absolute; width:0; height:0;
+  border:0 solid var(--cobalt-hot);
+  opacity:0;
+  transition:width .22s cubic-bezier(.4,0,.2,1), height .22s cubic-bezier(.4,0,.2,1), opacity .18s ease;
+}
+.reticle-focus i.tl{top:-6px; left:-6px; border-width:0 0 0 0; border-top-width:0; border-left-width:0}
+.field-input-wrap.focused .reticle-focus i{opacity:1; width:14px; height:14px; box-shadow:0 0 8px rgba(63,107,255,0.5)}
+.field-input-wrap.focused .reticle-focus i.tl{top:-6px; left:-6px; border-top:2px solid var(--cobalt-hot); border-left:2px solid var(--cobalt-hot)}
+.field-input-wrap.focused .reticle-focus i.tr{top:-6px; right:-6px; border-top:2px solid var(--cobalt-hot); border-right:2px solid var(--cobalt-hot)}
+.field-input-wrap.focused .reticle-focus i.bl{bottom:-6px; left:-6px; border-bottom:2px solid var(--cobalt-hot); border-left:2px solid var(--cobalt-hot)}
+.field-input-wrap.focused .reticle-focus i.br{bottom:-6px; right:-6px; border-bottom:2px solid var(--cobalt-hot); border-right:2px solid var(--cobalt-hot)}
+
+.field-error{
+  font-size:11.5px; color:#FF8A8A; margin-top:7px; font-family:var(--mono);
+  display:none; align-items:center; gap:6px;
+}
+.field-error.show{display:flex}
+.field.invalid input, .field.invalid textarea{border-color:#B23B3B}
+.field-hint{font-size:11px; color:var(--slate); margin-top:7px; line-height:1.6}
+.field-note{font-size:11.5px; color:var(--cyan-glow); margin-top:7px; font-family:var(--mono)}
+
+/* toggle rows */
+.toggle-row{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  border:1px solid var(--hairline); padding:14px 16px; cursor:pointer; user-select:none;
+  transition:border-color .2s ease, background .2s ease;
+}
+.toggle-row:hover{border-color:var(--hairline-cyan)}
+.toggle-row.on{border-color:rgba(63,107,255,0.45); background:rgba(63,107,255,0.06)}
+.toggle-copy-cjk{font-size:13.5px; color:var(--paper); font-weight:500}
+.toggle-copy-en{font-size:11px; color:var(--slate); margin-top:3px}
+.toggle-price{font-family:var(--mono); font-size:12.5px; color:var(--cyan-glow); white-space:nowrap; flex:none}
+.switch{
+  width:38px; height:21px; border-radius:11px; background:rgba(244,247,248,0.12);
+  position:relative; flex:none; transition:background .2s ease; border:1px solid var(--hairline);
+}
+.switch::after{
+  content:""; position:absolute; top:2px; left:2px; width:15px; height:15px; border-radius:50%;
+  background:var(--slate); transition:transform .2s ease, background .2s ease;
+}
+.toggle-row.on .switch{background:rgba(63,107,255,0.25); border-color:var(--cobalt-hot)}
+.toggle-row.on .switch::after{transform:translateX(17px); background:var(--cobalt-hot); box-shadow:0 0 8px rgba(63,107,255,0.7)}
+
+.reveal{
+  overflow:hidden; max-height:0; opacity:0; transition:max-height .3s ease, opacity .3s ease, margin .3s ease;
+}
+.reveal.open{max-height:600px; opacity:1; margin-top:14px}
+
+.prep-box{
+  border:1px solid var(--hairline); padding:14px 16px; font-size:11.5px; color:var(--slate); line-height:1.85;
+}
+.prep-box b{color:var(--ice); font-weight:500}
+
+.check-row{display:flex; align-items:flex-start; gap:10px; margin-bottom:14px; cursor:pointer}
+.check-row:last-child{margin-bottom:0}
+.check-box{
+  width:17px; height:17px; border:1px solid var(--hairline-cyan); flex:none; margin-top:2px;
+  position:relative; transition:border-color .2s ease, background .2s ease;
+}
+.check-box.checked{background:var(--cobalt-hot); border-color:var(--cobalt-hot)}
+.check-box.checked::after{
+  content:""; position:absolute; left:4px; top:1px; width:5px; height:9px;
+  border-right:2px solid var(--ink); border-bottom:2px solid var(--ink); transform:rotate(40deg);
+}
+.check-copy{font-size:12px; color:var(--ice); line-height:1.7}
+.check-copy a{color:var(--cyan-glow); text-decoration:underline; text-underline-offset:2px}
+/* Deliberately NOT nested inside .check-row — a link overlapping a clickable
+   toggle's hit area is fragile (a tap can land on both at once) and, since
+   this page's primary audience opens it inside WeChat's in-app browser
+   (unreliable target="_blank" handling), risky enough to wipe the guest's
+   filled-in form. Kept as its own separate line below each checkbox. */
+.legal-view-link{
+  display:inline-block; margin:-8px 0 14px 27px; font-size:11px;
+  color:var(--cyan-glow); text-decoration:underline; text-underline-offset:2px;
+}
+
+/* single-select pill groups (ticket choice / testing slot / workout / companion count) */
+.pill-group{display:flex; flex-wrap:wrap; gap:9px}
+.pill{
+  display:flex; align-items:center; gap:8px; border:1px solid var(--hairline); padding:10px 14px;
+  cursor:pointer; font-size:12.5px; color:var(--ice); transition:border-color .2s ease, background .2s ease, color .2s ease;
+}
+.pill:hover{border-color:var(--hairline-cyan)}
+.pill.active{border-color:var(--cobalt-hot); background:rgba(63,107,255,0.08); color:var(--paper)}
+.pill input{position:absolute; opacity:0; width:0; height:0; pointer-events:none}
+.pill .pdot{width:8px; height:8px; border:1px solid var(--hairline-cyan); border-radius:50%; flex:none; position:relative}
+.pill.active .pdot{border-color:var(--cobalt-hot)}
+.pill.active .pdot::after{content:""; position:absolute; inset:2px; background:var(--cobalt-hot); border-radius:50%; box-shadow:0 0 6px rgba(63,107,255,.7)}
+
+.companion-card{border:1px solid var(--hairline); padding:14px 15px; margin-top:12px}
+.companion-card-label{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--cyan-glow); margin-bottom:10px}
+.companion-card-fields{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+@media (max-width:640px){.companion-card-fields{grid-template-columns:1fr}}
+
+.form-alert{
+  display:none; align-items:center; gap:10px; font-size:12.5px; color:#FF8A8A;
+  border:1px solid rgba(178,59,59,0.5); background:rgba(178,59,59,0.08); padding:12px 14px; margin-bottom:20px;
+}
+.form-alert.show{display:flex}
+
+.submit-btn{
+  width:100%; background:var(--cobalt-hot); color:var(--paper); border:none;
+  font-family:var(--mono); font-size:13.5px; letter-spacing:.06em; text-transform:uppercase;
+  padding:17px 18px; cursor:pointer; transition:background .2s ease, opacity .2s ease, box-shadow .2s ease;
+  box-shadow:0 0 0 rgba(63,107,255,0);
+  position:relative; overflow:hidden;
+}
+.submit-btn:not(:disabled):hover{box-shadow:0 0 24px rgba(63,107,255,0.45)}
+.submit-btn:disabled{background:rgba(244,247,248,0.08); color:var(--slate); cursor:not-allowed}
+.submit-btn .spinner{
+  display:inline-block; width:13px; height:13px; border-radius:50%;
+  border:2px solid rgba(244,247,248,0.35); border-top-color:var(--paper);
+  animation:spin .7s linear infinite; margin-right:8px; vertical-align:-2px;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.recognized-note{font-size:11.5px; font-family:var(--mono); margin-top:8px}
+.recognized-note.ok{color:var(--cyan-glow)}
+.recognized-note.miss{color:var(--slate)}
+
+/* ===== confirmation ===== */
+.confirm-wrap{display:none}
+.confirm-wrap.show{display:block}
+.confirm-ref{
+  font-family:var(--mono); font-size:13px; letter-spacing:.1em; color:var(--cyan-glow);
+  margin-bottom:6px; text-transform:uppercase;
+}
+.confirm-ref-code{
+  font-family:var(--mono); font-size:clamp(26px,5vw,36px); color:var(--paper); font-weight:600;
+  letter-spacing:.04em; margin-bottom:22px;
+}
+.confirm-row{display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--hairline); font-size:13px}
+.confirm-row:last-child{border-bottom:none}
+.confirm-row .k{color:var(--slate); font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase}
+.confirm-row .v{color:var(--paper); text-align:right}
+.confirm-amount{font-family:var(--mono); font-size:clamp(30px,6vw,42px); font-weight:600}
+.confirm-amount.due{color:var(--cobalt-hot); text-shadow:0 0 20px rgba(63,107,255,0.4)}
+.confirm-amount.free{color:var(--cyan-glow)}
+.confirm-instructions{font-size:13.5px; color:var(--ice); line-height:1.9; margin:22px 0}
+.qr-card{
+  border:1px solid var(--hairline-cyan); padding:18px; display:flex; flex-direction:column; align-items:center; gap:12px;
+  max-width:280px; margin:0 auto 22px;
+}
+.qr-card img{width:190px; height:190px; background:#fff; padding:8px}
+.qr-caption{font-family:var(--mono); font-size:10px; color:var(--slate); letter-spacing:.06em; text-align:center}
+.confirm-savenote{font-size:11.5px; color:var(--slate); text-align:center; margin-top:8px}
+
+/* ===== footer ===== */
+footer{padding:36px 0 60px; text-align:center}
+.footer-brand{font-family:var(--mono); font-size:11px; letter-spacing:.08em; color:var(--slate); margin-bottom:10px}
+.footer-links{font-family:var(--mono); font-size:11px; color:var(--slate); letter-spacing:.04em}
+.footer-links a{color:var(--ice); text-decoration:none; border-bottom:1px solid var(--hairline-cyan)}
+.footer-links a:hover{color:var(--cyan-glow)}
+.footer-fine{font-size:10.5px; color:var(--slate); margin-top:14px; letter-spacing:.02em}
+
+/* entrance animation */
+.fade-in{opacity:1; transform:none; transition:opacity .6s ease, transform .6s ease}
+.fade-in.visible{opacity:1; transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  .fade-in{opacity:1; transform:none; transition:none}
+}
+
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+
+/* mobile index drawer */
+.index-drawer{
+  position:fixed; inset:0 0 0 auto; width:min(78vw,300px); background:var(--glass-dark);
+  border-left:1px solid var(--hairline); z-index:200; transform:translateX(100%);
+  transition:transform .25s ease; padding:70px 22px 22px; overflow-y:auto;
+}
+.index-drawer.open{transform:translateX(0)}
+.index-drawer a{
+  display:flex; align-items:center; gap:10px; font-family:var(--mono); font-size:12px; letter-spacing:.08em;
+  color:var(--ice); text-decoration:none; padding:13px 0; border-bottom:1px solid var(--hairline);
+}
+.index-drawer a b{color:var(--cobalt-hot)}
+.drawer-backdrop{
+  position:fixed; inset:0; background:rgba(6,7,10,0.6); z-index:199; opacity:0; pointer-events:none; transition:opacity .25s ease;
+}
+.drawer-backdrop.open{opacity:1; pointer-events:auto}
+.drawer-close{
+  position:absolute; top:20px; right:20px; background:none; border:1px solid var(--hairline); color:var(--paper);
+  width:32px; height:32px; font-size:16px; cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="console-bg" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-lockup">
+      <div class="brand-chip"><img src="/assets/compound-mark.png" alt=""></div>
+      <span class="brand-word">Compound</span>
+      <span class="brand-date">07.11 · SHANGHAI</span>
+    </div>
+    <nav class="jump-nav" aria-label="Section index">
+      <a href="#overview"><b>01</b>OVERVIEW</a>
+      <a href="#agenda"><b>02</b>AGENDA</a>
+      <a href="#faculty"><b>03</b>FACULTY</a>
+      <a href="#access"><b>04</b>ACCESS</a>
+      <a href="#intake"><b>05</b>INTAKE</a>
+    </nav>
+    <button class="mobile-index-btn" id="drawerOpenBtn" aria-haspopup="true" aria-expanded="false">INDEX ▾</button>
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<nav class="index-drawer" id="indexDrawer" aria-label="Section index (mobile)">
+  <button class="drawer-close" id="drawerCloseBtn" aria-label="Close">×</button>
+  <a href="#overview"><b>01</b>OVERVIEW</a>
+  <a href="#agenda"><b>02</b>AGENDA</a>
+  <a href="#faculty"><b>03</b>FACULTY</a>
+  <a href="#access"><b>04</b>ACCESS</a>
+  <a href="#intake"><b>05</b>INTAKE</a>
+</nav>
+
+<main class="shell">
+
+  <!-- ============ HERO / 01 OVERVIEW ============ -->
+  <section id="overview" class="hero-top">
+    <div class="hero-kicker">
+      <span class="reticle nested" aria-hidden="true"></span>
+      A FUTURE HUMAN'S DAY ZERO · 上海 · VOL.2 · MMXXVI
+    </div>
+
+    <div class="hero-grid">
+      <div class="fade-in" data-observe>
+        <h1 class="hero-title">未來人 Day 0</h1>
+        <div class="hero-sub">DAY 0 · 第零日</div>
+        <p class="tagline-cjk">設定你的 <span class="t0">t=0</span>，開始生命複利。</p>
+        <p class="tagline-en">Set your <span class="t0">t=0</span>. Begin compounding your life.</p>
+
+        <div class="intro-block">
+          <p class="intro-cjk">設定你的 <span class="t0">t=0</span>，開始生命複利。Compound 正在打造一個以科學驅動的「longevity 健康複利」生活方式社區。我們假設生命不必線性累加，而可以複利。7 月 11 日上午，我們將舉辦上海首場「Compounder 未來人 Day 0」沙龍工作坊。</p>
+          <p class="intro-en">Set your t=0. Begin compounding your life. Compound is building a science-led community for compounding life — life need not merely accumulate; it can compound. On the morning of July 11, we host Shanghai's first "Compounder Future Human Day 0" salon workshop.</p>
+        </div>
+      </div>
+
+      <div class="fade-in" data-observe>
+        <div class="specimen-frame">
+          <div class="specimen-inner">
+            <img src="/assets/day0/hero-original.png" alt="Compound Day 0 主題影像 — 三人剪影於藍色調網幕前">
+            <div class="specimen-scrim-top"></div>
+            <div class="specimen-scrim-bottom"></div>
+            <div class="specimen-label">SPECIMEN · VOL.2</div>
+            <div class="floating-tag tag-see"><span class="reticle" aria-hidden="true"></span>SEE · 生物標誌</div>
+            <div class="floating-tag tag-understand"><span class="reticle" aria-hidden="true"></span>UNDERSTAND · SCIENCE</div>
+            <div class="floating-tag tag-compound"><span class="reticle" aria-hidden="true"></span>COMPOUND · AGENT</div>
+          </div>
+          <div class="corner-brackets" aria-hidden="true">
+            <i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- spec table: 見知行復 -->
+    <div class="panel fade-in" data-observe style="margin-top:44px">
+      <div class="panel-header">
+        <span class="reticle" aria-hidden="true"></span>
+        WHAT YOU TAKE HOME <span class="tag">· SPEC</span>
+      </div>
+      <div class="spec-table">
+        <div class="spec-row">
+          <div class="spec-glyph">見</div>
+          <div>
+            <div class="spec-word">SEE</div>
+            <div class="spec-gloss">生物標誌基線 Biomarkers</div>
+          </div>
+          <div class="spec-idx">01 / 04</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-glyph">知</div>
+          <div>
+            <div class="spec-word">UNDERSTAND</div>
+            <div class="spec-gloss">Longevity Science 科學認知</div>
+          </div>
+          <div class="spec-idx">02 / 04</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-glyph">行</div>
+          <div>
+            <div class="spec-word">EXPERIMENT</div>
+            <div class="spec-gloss">睡 · 吃 · 動 Sleep · Eat · Move</div>
+          </div>
+          <div class="spec-idx">03 / 04</div>
+        </div>
+        <div class="spec-row">
+          <div class="spec-glyph">復</div>
+          <div>
+            <div class="spec-word">COMPOUND</div>
+            <div class="spec-gloss">長寿智能體 Personal Agent</div>
+          </div>
+          <div class="spec-idx">04 / 04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 AGENDA ============ -->
+  <section id="agenda">
+    <div class="section-index"><b>02</b>AGENDA · SCHEDULE</div>
+    <div class="panel fade-in" data-observe>
+      <div class="panel-header">
+        <span class="reticle" aria-hidden="true"></span>
+        SCHEDULE <span class="tag">· 2026.07.11 · 08:30–13:00</span>
+      </div>
+      <div class="agenda-table">
+        <div class="agenda-vline" aria-hidden="true"></div>
+
+        <div class="agenda-row">
+          <div class="agenda-time">08:30–10:00</div>
+          <div class="agenda-tick"><span class="reticle" aria-hidden="true"></span></div>
+          <div>
+            <div class="agenda-title-cjk">抵達｜深度生物標誌物檢測（可選）+ 呼吸基本法 / 4×4 HIIT</div>
+            <div class="agenda-title-en">Arrival | Deep biomarker testing (optional) + breathwork / 4×4 HIIT</div>
+          </div>
+        </div>
+
+        <div class="agenda-row">
+          <div class="agenda-time">10:00–10:30</div>
+          <div class="agenda-tick"><span class="reticle" aria-hidden="true"></span></div>
+          <div>
+            <div class="agenda-title-cjk">科學前沿｜Longevity science 到底在研究什麼（周欣 · 應可鈞）</div>
+            <div class="agenda-title-en">Science frontier | What longevity science actually studies</div>
+          </div>
+        </div>
+
+        <div class="agenda-row">
+          <div class="agenda-time">10:30–11:00</div>
+          <div class="agenda-tick"><span class="reticle" aria-hidden="true"></span></div>
+          <div>
+            <div class="agenda-title-cjk">未來人 Day 0｜一場關於生命複利的實驗（關於 Compound · 生物標誌物 101 · 產品 demo）</div>
+            <div class="agenda-title-en">Future Human Day 0 | An experiment in compounding life</div>
+          </div>
+        </div>
+
+        <div class="agenda-row">
+          <div class="agenda-time">11:00</div>
+          <div class="agenda-tick"><span class="reticle" aria-hidden="true"></span></div>
+          <div>
+            <div class="agenda-title-cjk">Brunch 開啟（自助）</div>
+            <div class="agenda-title-en">Brunch opens</div>
+          </div>
+        </div>
+
+        <div class="agenda-row">
+          <div class="agenda-time">11:15–12:00</div>
+          <div class="agenda-tick"><span class="reticle" aria-hidden="true"></span></div>
+          <div>
+            <div class="agenda-title-cjk">沙龍｜嘉賓對談：未來生命，到底意味著什麼?（周欣 · 應可鈞 · 陳鋼 · 呂鑫）</div>
+            <div class="agenda-title-en">Salon | Panel: What does a future life actually mean?</div>
+          </div>
+        </div>
+
+        <div class="agenda-row">
+          <div class="agenda-time">12:00–12:30</div>
+          <div class="agenda-tick"><span class="reticle" aria-hidden="true"></span></div>
+          <div>
+            <div class="agenda-title-cjk">踐行｜數據驅動的自我健康優化 + 部署你的 agent</div>
+            <div class="agenda-title-en">Practice | Data-driven self-optimization + deploy your agent</div>
+          </div>
+        </div>
+
+        <div class="agenda-row">
+          <div class="agenda-time">12:30–13:00</div>
+          <div class="agenda-tick"><span class="reticle" aria-hidden="true"></span></div>
+          <div>
+            <div class="agenda-title-cjk">自由交流 + 未來預告 + 加入社群</div>
+            <div class="agenda-title-en">Open exchange + what's next</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 FACULTY ============ -->
+  <section id="faculty">
+    <div class="section-index"><b>03</b>FACULTY · SPEAKERS</div>
+    <div class="panel fade-in" data-observe>
+      <div class="panel-header">
+        <span class="reticle" aria-hidden="true"></span>
+        FACULTY <span class="tag">· 嘉賓陣容</span>
+      </div>
+      <p class="faculty-line">周欣（復旦大學教授）· 應可鈞（哈佛/斯坦福，AI × 衰老）· 陳鋼（微基因 WeGene 創始人）· 呂鑫（瑞金醫院神經外科 · 腦機接口創始人）· 馬馳（北京協和醫院骨科醫生 · 健康 AI 公司創始人）</p>
+      <p class="faculty-creds">Stanford · Princeton · Harvard · 北大 · 復旦 ｜ Nature Aging (cover) · Science</p>
+    </div>
+  </section>
+
+  <!-- ============ 04 ACCESS (logistics + pricing) ============ -->
+  <section id="access">
+    <div class="section-index"><b>04</b>ACCESS · LOGISTICS &amp; PRICING</div>
+
+    <div class="panel fade-in" data-observe>
+      <div class="panel-header">
+        <span class="reticle" aria-hidden="true"></span>
+        LOGISTICS <span class="tag">· 時間 / 地點 / 名額</span>
+      </div>
+      <div class="logistics-grid">
+        <div class="logistics-item">
+          <div class="logistics-label">日期 DATE</div>
+          <div class="logistics-value">2026.07.11（週六）<br>8:30–13:00</div>
+        </div>
+        <div class="logistics-item">
+          <div class="logistics-label">地點 VENUE</div>
+          <div class="logistics-value">Hasa House 2F · 東湖路 · 上海<br><span style="color:var(--slate)">[待確定]</span></div>
+        </div>
+        <div class="logistics-item">
+          <div class="logistics-label">名額 CAPACITY</div>
+          <div class="logistics-value">三十席 · 僅限同道 Compounder 推薦，滿即止</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel fade-in" data-observe>
+      <div class="panel-header">
+        <span class="reticle" aria-hidden="true"></span>
+        PRICING <span class="tag">· 分層 / TIER COMPARISON</span>
+      </div>
+      <table class="price-table" id="priceTable">
+        <thead>
+          <tr>
+            <th>分層 Tier</th>
+            <th>沙龍席 Salon</th>
+            <th>+ 檢測 Testing</th>
+            <th>合計 Total</th>
+            <th>備註 Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="row-public">
+            <td data-label="Tier"><span class="tier-name">公開 Public</span></td>
+            <td data-label="Salon" class="num">¥599</td>
+            <td data-label="+Testing" class="num">+¥2,400</td>
+            <td data-label="Total" class="num">¥2,999</td>
+            <td data-label="Notes" class="tier-note">會員席 Member Seat</td>
+          </tr>
+          <tr id="row-friend">
+            <td data-label="Tier"><span class="tier-name">同道 Friend</span></td>
+            <td data-label="Salon" class="num locked">·&nbsp;·&nbsp;·</td>
+            <td data-label="+Testing" class="num locked">·&nbsp;·&nbsp;·</td>
+            <td data-label="Total" class="num locked">·&nbsp;·&nbsp;·</td>
+            <td data-label="Notes" class="tier-note">需推薦碼解鎖 · 體驗席 Experience Seat</td>
+          </tr>
+          <tr id="row-vip">
+            <td data-label="Tier"><span class="tier-name">VIP</span></td>
+            <td data-label="Salon" class="num locked">·&nbsp;·&nbsp;·</td>
+            <td data-label="+Testing" class="num locked">·&nbsp;·&nbsp;·</td>
+            <td data-label="Total" class="num locked">·&nbsp;·&nbsp;·</td>
+            <td data-label="Notes" class="tier-note">需專屬邀請碼解鎖 · VIP</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="perk-note">
+        <b>優惠彩蛋</b>：雙人同行各享 8 折；WeGene 微基因會員基因數據免費接入 agent；未來每邀請一位同道加入，即可為你的專屬智能體「續命」。
+        <br><br>
+        輸入邀請人給你的推薦碼，解鎖同道 / VIP 價 / Enter your referral code to unlock referred pricing — 系統將於送出報名時核對推薦碼並套用對應價格，確認頁會顯示最終金額。
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 INTAKE ============ -->
+  <section id="intake">
+    <div class="section-index"><b>05</b>INTAKE · REGISTRATION</div>
+
+    <div class="panel fade-in" data-observe id="formPanel">
+      <div class="panel-header">
+        <span class="reticle" aria-hidden="true"></span>
+        INTAKE FORM <span class="tag">· RSVP</span>
+      </div>
+
+      <div class="form-alert" id="formAlert" role="alert" aria-live="assertive"></div>
+
+      <form id="rsvpForm" novalidate>
+        <!-- 01 name -->
+        <div class="field" id="field-name">
+          <label class="field-label" for="in-name"><b>01</b> 姓名 Name</label>
+          <div class="field-input-wrap">
+            <input type="text" id="in-name" name="name" autocomplete="name" placeholder="請輸入姓名" required>
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+          <div class="field-error" id="err-name"></div>
+        </div>
+
+        <!-- 02 wechat -->
+        <div class="field" id="field-wechatId">
+          <label class="field-label" for="in-wechat"><b>02</b> 微信號 WeChat ID</label>
+          <div class="field-input-wrap">
+            <input type="text" id="in-wechat" name="wechatId" autocomplete="off" placeholder="用於聯絡與確認席位" required>
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+          <div class="field-error" id="err-wechatId"></div>
+        </div>
+
+        <!-- 03 phone -->
+        <div class="field" id="field-phone">
+          <label class="field-label" for="in-phone"><b>03</b> 手機 / 郵箱 Phone / Email <span class="opt">（選填 optional）</span></label>
+          <div class="field-input-wrap">
+            <input type="text" id="in-phone" name="phone" autocomplete="tel email" placeholder="選填，便於現場聯繫">
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+          <div class="field-error" id="err-phone"></div>
+        </div>
+
+        <!-- 04 company -->
+        <div class="field" id="field-companyTitle">
+          <label class="field-label" for="in-company"><b>04</b> 公司 / 職位 Company / Title <span class="opt">（選填 optional）</span></label>
+          <div class="field-input-wrap">
+            <input type="text" id="in-company" name="companyTitle" autocomplete="organization-title" placeholder="選填">
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+        </div>
+
+        <!-- 05 inviter -->
+        <div class="field" id="field-inviterName">
+          <label class="field-label" for="in-inviter"><b>05</b> 邀請人姓名 Invited by <span class="opt">（選填 optional）</span></label>
+          <div class="field-input-wrap">
+            <input type="text" id="in-inviter" name="inviterName" autocomplete="off" placeholder="是哪位同道邀請你來的？">
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+        </div>
+
+        <!-- 06 referral -->
+        <div class="field" id="field-referralCode">
+          <label class="field-label" for="in-code"><b>06</b> 推薦碼 / 邀請密語 Referral Code <span class="opt">（選填 optional）</span></label>
+          <div class="field-input-wrap">
+            <input type="text" id="in-code" name="referralCode" autocomplete="off" placeholder="輸入邀請人給你的推薦碼，解鎖同道 / VIP 價" style="text-transform:uppercase">
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+          <div class="recognized-note" id="codeNote"></div>
+        </div>
+
+        <!-- 07 ticket choice -->
+        <div class="field" id="field-ticketChoice">
+          <label class="field-label"><b>07</b> 選擇席位 Choose your seat</label>
+          <div class="field-hint">上方 PRICING 表格的分層會隨你輸入的推薦碼即時更新</div>
+          <div class="pill-group" id="ticketGroup" role="radiogroup" aria-label="席位">
+            <label class="pill active" data-ticket="salon"><input type="radio" name="ticketChoice" value="salon" checked><span class="pdot"></span>沙龍席 Salon</label>
+            <label class="pill" data-ticket="member"><input type="radio" name="ticketChoice" value="member"><span class="pdot"></span>會員席 Member（+檢測）</label>
+            <label class="pill" data-ticket="decide_onsite"><input type="radio" name="ticketChoice" value="decide_onsite"><span class="pdot"></span>到現場再決定</label>
+          </div>
+          <div class="field-error" id="err-ticketChoice"></div>
+
+          <div class="reveal" id="testingRevealWrap">
+            <div class="field" id="field-testingSlot" style="margin-bottom:14px">
+              <label class="field-label" style="margin-top:14px">會員席 · 檢測時段 Testing Slot</label>
+              <div class="pill-group" id="testingSlotGroup" role="radiogroup" aria-label="檢測時段">
+                <label class="pill" data-slot="08:30-09:00"><input type="radio" name="testingSlot" value="08:30-09:00"><span class="pdot"></span>8:30–9:00</label>
+                <label class="pill" data-slot="09:00-09:30"><input type="radio" name="testingSlot" value="09:00-09:30"><span class="pdot"></span>9:00–9:30</label>
+                <label class="pill" data-slot="09:30-10:00"><input type="radio" name="testingSlot" value="09:30-10:00"><span class="pdot"></span>9:30–10:00</label>
+                <label class="pill" data-slot="10:30-11:00"><input type="radio" name="testingSlot" value="10:30-11:00"><span class="pdot"></span>10:30–11:00</label>
+              </div>
+              <div class="field-error" id="err-testingSlot"></div>
+            </div>
+
+            <div class="prep-box">
+              檢測前須知：<b>空腹 10–12 小時</b>；<b>避免劇烈運動</b> 24 小時前；<b>避免酒精/重食</b> 24–72 小時前；<b>暫停生物素/B 群補充劑</b> 48–72 小時前。
+            </div>
+            <div class="field" id="field-testingAck" style="margin-top:12px; margin-bottom:0">
+              <div class="check-row" id="ackRow" role="checkbox" tabindex="0" aria-checked="false">
+                <span class="check-box" id="ackBox"></span>
+                <span class="check-copy">我已閱讀並確認檢測前須知 Testing prep acknowledged</span>
+              </div>
+              <div class="field-error" id="err-testingAck"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 08 workout -->
+        <div class="field" id="field-workoutPref">
+          <label class="field-label"><b>08</b> 是否參加 8:30–10:00 運動工作坊 Movement Block</label>
+          <div class="field-hint">用於場地與器材安排</div>
+          <div class="pill-group" id="workoutGroup" role="radiogroup" aria-label="運動工作坊">
+            <label class="pill" data-workout="breathwork"><input type="radio" name="workoutPref" value="breathwork"><span class="pdot"></span>呼吸基本法</label>
+            <label class="pill" data-workout="hiit"><input type="radio" name="workoutPref" value="hiit"><span class="pdot"></span>4×4 HIIT</label>
+            <label class="pill" data-workout="zone2"><input type="radio" name="workoutPref" value="zone2"><span class="pdot"></span>Zone 2</label>
+            <label class="pill active" data-workout="none"><input type="radio" name="workoutPref" value="none" checked><span class="pdot"></span>暫不參加</label>
+          </div>
+        </div>
+
+        <!-- 09 notes -->
+        <div class="field" id="field-notes">
+          <label class="field-label" for="in-notes"><b>09</b> 飲食忌口 / 過敏 Dietary Restrictions <span class="opt">（選填 optional）</span></label>
+          <div class="field-input-wrap">
+            <textarea id="in-notes" name="notes" placeholder="飲食限制、過敏、其他備註（選填）"></textarea>
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+        </div>
+
+        <!-- 10 companion -->
+        <div class="field" id="field-companion">
+          <label class="field-label"><b>10</b> 是否有同道 Compounders 同行 Bring Companions <span class="opt">（選填 optional）</span></label>
+          <div class="field-hint">雙人同行各享 8 折 — 全員（含你）票價各再打 8 折</div>
+          <div class="pill-group" id="companionCountGroup" role="radiogroup" aria-label="同行人數">
+            <label class="pill active" data-count="0"><input type="radio" name="companionCount" value="0" checked><span class="pdot"></span>不同行 Just me</label>
+            <label class="pill" data-count="1"><input type="radio" name="companionCount" value="1"><span class="pdot"></span>1 位同道</label>
+            <label class="pill" data-count="2"><input type="radio" name="companionCount" value="2"><span class="pdot"></span>2 位同道</label>
+          </div>
+          <div class="reveal" id="companionReveal">
+            <div class="companion-card field" id="field-companion1">
+              <div class="companion-card-label">同行者 1 · COMPANION 1</div>
+              <div class="companion-card-fields">
+                <input type="text" id="in-companion1-name" name="companion1Name" placeholder="姓名 Name">
+                <input type="text" id="in-companion1-wechat" name="companion1Wechat" placeholder="微信號 WeChat">
+              </div>
+              <div class="field-error" id="err-companion1"></div>
+            </div>
+            <div class="companion-card field reveal" id="field-companion2">
+              <div class="companion-card-label">同行者 2 · COMPANION 2</div>
+              <div class="companion-card-fields">
+                <input type="text" id="in-companion2-name" name="companion2Name" placeholder="姓名 Name">
+                <input type="text" id="in-companion2-wechat" name="companion2Wechat" placeholder="微信號 WeChat">
+              </div>
+              <div class="field-error" id="err-companion2"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 topic -->
+        <div class="field" id="field-topic">
+          <label class="field-label" for="in-topic"><b>11</b> 當天最想探討或體驗的話題 Topic you're curious about <span class="opt">（選填 optional）</span></label>
+          <div class="field-input-wrap">
+            <textarea id="in-topic" name="topicInterest" placeholder="選填"></textarea>
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+        </div>
+
+        <!-- 12 health -->
+        <div class="field" id="field-health">
+          <label class="field-label" for="in-health"><b>12</b> 目前如何管理健康 / 最想先解決的問題 Current approach or top question <span class="opt">（選填 optional）</span></label>
+          <div class="field-input-wrap">
+            <textarea id="in-health" name="healthChallenge" placeholder="選填"></textarea>
+            <div class="reticle-focus" aria-hidden="true"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i></div>
+          </div>
+        </div>
+
+        <!-- 13 consent -->
+        <div class="field" id="field-consent">
+          <label class="field-label"><b>13</b> 同意條款 Consent</label>
+          <div class="check-row" id="consentServiceRow" role="checkbox" tabindex="0" aria-checked="false">
+            <span class="check-box" id="consentServiceBox"></span>
+            <span class="check-copy">我已閱讀並同意服務協議 Service Agreement</span>
+          </div>
+          <a class="legal-view-link" href="/legal/service-agreement" target="_blank" rel="noopener">查看全文 View full text ↗</a>
+
+          <div class="check-row" id="consentPrivacyRow" role="checkbox" tabindex="0" aria-checked="false">
+            <span class="check-box" id="consentPrivacyBox"></span>
+            <span class="check-copy">我已閱讀並同意隱私政策 Privacy Policy</span>
+          </div>
+          <a class="legal-view-link" href="/legal/privacy-policy" target="_blank" rel="noopener">查看全文 View full text ↗</a>
+
+          <div class="reveal" id="consentHealthReveal">
+            <div class="check-row" id="consentHealthRow" role="checkbox" tabindex="0" aria-checked="false">
+              <span class="check-box" id="consentHealthBox"></span>
+              <span class="check-copy">我已閱讀並同意健康/生物標誌檢測知情同意書 Health &amp; Biomarker Consent</span>
+            </div>
+            <a class="legal-view-link" href="/legal/consent-form" target="_blank" rel="noopener">查看全文 View full text ↗</a>
+          </div>
+          <div class="field-error" id="err-consent"></div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn" disabled>確認報名 · 應付 ¥599</button>
+      </form>
+    </div>
+
+    <!-- ============ CONFIRMATION ============ -->
+    <div class="panel confirm-wrap" id="confirmPanel" tabindex="-1">
+      <div class="panel-header">
+        <span class="reticle" aria-hidden="true"></span>
+        CONFIRMED <span class="tag">· 報名確認</span>
+      </div>
+      <div class="confirm-ref">REF CODE</div>
+      <div class="confirm-ref-code" id="confirmRefCode">D0-XXXXX</div>
+
+      <div class="confirm-row"><span class="k">姓名 Name</span><span class="v" id="confirmName">—</span></div>
+      <div class="confirm-row"><span class="k">分層 Tier</span><span class="v" id="confirmTier">—</span></div>
+      <div class="confirm-row"><span class="k">票種 Ticket</span><span class="v" id="confirmTicket">—</span></div>
+      <div class="confirm-row"><span class="k">含檢測 Testing</span><span class="v" id="confirmTesting">—</span></div>
+      <div class="confirm-row"><span class="k">偕伴同行 Companion</span><span class="v" id="confirmCompanion">—</span></div>
+      <div class="confirm-row"><span class="k">應付金額 Amount Due</span><span class="v confirm-amount" id="confirmAmount">¥0</span></div>
+
+      <div id="codeMissNote" class="recognized-note miss" style="display:none; margin-top:14px"></div>
+
+      <div id="payBlock">
+        <p class="confirm-instructions" id="payInstructions"></p>
+        <div class="qr-card">
+          <img src="/assets/wechat-qr-placeholder.svg" alt="企業微信二維碼 WeChat QR code">
+          <div class="qr-caption">長按識別二維碼 · 添加企業微信<br>SCAN TO ADD WECHAT</div>
+        </div>
+      </div>
+
+      <p class="confirm-savenote">請截圖保存本頁面 · Please screenshot and save this page</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">COMPOUNDLIFE.AI</div>
+  <div class="footer-links">
+    <a href="/legal/privacy-policy" target="_blank" rel="noopener">隱私政策</a>
+    &nbsp;·&nbsp;
+    <a href="/legal/service-agreement" target="_blank" rel="noopener">服務協議</a>
+  </div>
+  <div class="footer-fine">RSVP · BY REFERRAL · 與想一起 compound 的朋友同行</div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- entrance animation ---------- */
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var observed = document.querySelectorAll('[data-observe]');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    observed.forEach(function(el){ el.classList.add('visible'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    observed.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---------- mobile index drawer ---------- */
+  var drawer = document.getElementById('indexDrawer');
+  var backdrop = document.getElementById('drawerBackdrop');
+  var openBtn = document.getElementById('drawerOpenBtn');
+  var closeBtn = document.getElementById('drawerCloseBtn');
+  function openDrawer(){ drawer.classList.add('open'); backdrop.classList.add('open'); openBtn.setAttribute('aria-expanded','true'); }
+  function closeDrawer(){ drawer.classList.remove('open'); backdrop.classList.remove('open'); openBtn.setAttribute('aria-expanded','false'); }
+  openBtn.addEventListener('click', openDrawer);
+  closeBtn.addEventListener('click', closeDrawer);
+  backdrop.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
+
+  /* ---------- legal-doc links ----------
+     target="_blank" is honored inconsistently in WeChat's in-app browser
+     (this page's primary audience) — confirmed in testing that even a plain,
+     non-nested <a target="_blank"> can navigate the CURRENT tab instead of
+     opening a new one, which would silently wipe the guest's filled-in form.
+     A capture-phase listener that explicitly preventDefault()s and opens via
+     window.open() is what reliably stops that (a bubble-phase listener does
+     not, empirically). Also kept these links structurally separate from the
+     checkbox toggle rows above (see .legal-view-link / .legal-links-row) so
+     a tap can never land on both a checkbox and a link at once. */
+  document.querySelectorAll('.check-copy a, .legal-view-link').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      window.open(a.href, '_blank', 'noopener');
+    }, { capture: true });
+  });
+
+  /* ---------- reticle focus brackets ---------- */
+  document.querySelectorAll('.field-input-wrap').forEach(function(wrap){
+    var input = wrap.querySelector('input, textarea');
+    if (!input) return;
+    input.addEventListener('focus', function(){ wrap.classList.add('focused'); });
+    input.addEventListener('blur', function(){ wrap.classList.remove('focused'); });
+  });
+
+  /* ---------- client-side tier table (mirrors backend) ---------- */
+  var REFERRAL_CODES_HINT = null; // codes are confidential; not enumerated client-side
+  var TIERS = {
+    vip:    { label: 'VIP · 專屬邀請', salon: 0,   addon: 0    },
+    friend: { label: '同道推薦價',      salon: 299, addon: 1700 },
+    public: { label: '公開報名價',      salon: 599, addon: 2400 }
+  };
+  // NOTE: real codes live only on the server (functions/api/register-v2.js).
+  // We cannot recognize codes client-side without leaking them, so the
+  // live estimate always shows "public" pricing unless the server has
+  // already told us (post-submit) that a code was recognized. This is
+  // fine per spec: "front-end price is only a live estimate for UX".
+  var currentTier = 'public';
+
+  var els = {
+    name: document.getElementById('in-name'),
+    wechat: document.getElementById('in-wechat'),
+    phone: document.getElementById('in-phone'),
+    company: document.getElementById('in-company'),
+    inviter: document.getElementById('in-inviter'),
+    code: document.getElementById('in-code'),
+    companion1Name: document.getElementById('in-companion1-name'),
+    companion1Wechat: document.getElementById('in-companion1-wechat'),
+    companion2Name: document.getElementById('in-companion2-name'),
+    companion2Wechat: document.getElementById('in-companion2-wechat'),
+    notes: document.getElementById('in-notes'),
+    topic: document.getElementById('in-topic'),
+    health: document.getElementById('in-health'),
+    codeNote: document.getElementById('codeNote'),
+    submitBtn: document.getElementById('submitBtn'),
+    formAlert: document.getElementById('formAlert')
+  };
+
+  var state = {
+    ticketChoice: 'salon',
+    testingSlot: null,
+    testingAck: false,
+    workoutPref: 'none',
+    companionCount: 0,
+    consentService: false,
+    consentPrivacy: false,
+    consentHealth: false,
+    submitting: false,
+    quoteLoading: false,
+    quote: null
+  };
+
+  /* ---------- price table active-row highlight ---------- */
+  function updatePriceHighlight(){
+    ['public','friend','vip'].forEach(function(t){
+      var row = document.getElementById('row-' + t);
+      if (row) row.classList.toggle('active-tier', t === currentTier);
+    });
+  }
+
+  /* ---------- live total calc ---------- */
+  function localQuote(){
+    var t = TIERS.public;
+    var wantsTesting = state.ticketChoice === 'member';
+    var perPerson = t.salon + (wantsTesting ? t.addon : 0);
+    var partySize = 1 + state.companionCount;
+    var discount = state.companionCount > 0 ? 0.2 : 0;
+    return {
+      tier: 'public',
+      tierLabel: t.label,
+      codeEntered: els.code.value.trim().length > 0,
+      codeRecognized: true,
+      salon: t.salon,
+      addon: t.addon,
+      memberTotal: t.salon + t.addon,
+      amountDue: Math.round(perPerson * partySize * (1 - discount))
+    };
+  }
+
+  function computeTotal(){
+    return Number((state.quote || localQuote()).amountDue || 0);
+  }
+
+  function refreshUI(){
+    var quote = state.quote || localQuote();
+    currentTier = quote.tier || 'public';
+    var total = computeTotal();
+    if (total === 0) {
+      els.submitBtn.textContent = '確認報名 · VIP 免費';
+    } else {
+      els.submitBtn.textContent = '確認報名 · 應付 ¥' + total.toLocaleString('en-US');
+    }
+    updatePriceHighlight();
+    validateAll();
+  }
+
+  /* referral code input: the code→tier map is confidential and never ships to
+     the browser. /api/quote-v2 resolves one quote without exposing the list. */
+  function setTierRowLocked(tier, locked, salon, addon){
+    var row = document.getElementById('row-' + tier);
+    if (!row) return;
+    var cells = row.querySelectorAll('.num');
+    if (locked) {
+      cells.forEach(function(c){ c.classList.add('locked'); c.textContent = '· · ·'; });
+    } else {
+      cells[0].classList.remove('locked'); cells[0].textContent = '¥' + salon.toLocaleString('en-US');
+      cells[1].classList.remove('locked'); cells[1].textContent = '+¥' + addon.toLocaleString('en-US');
+      cells[2].classList.remove('locked'); cells[2].textContent = '¥' + (salon + addon).toLocaleString('en-US');
+    }
+  }
+
+  var referralCheckSeq = 0;
+  var referralCheckTimer = null;
+  function requestQuote(){
+    var v = els.code.value.trim();
+    var seq = ++referralCheckSeq;
+    ['friend', 'vip'].forEach(function(t){ setTierRowLocked(t, true); });
+    state.quoteLoading = true;
+    state.quote = localQuote();
+    els.codeNote.textContent = v ? '核對口令中… Checking code…' : '';
+    els.codeNote.className = 'recognized-note';
+    refreshUI();
+
+    fetch('/api/quote-v2', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        referralCode: v,
+        ticketChoice: state.ticketChoice,
+        companionCount: state.companionCount
+      })
+    }).then(function(r){ return r.json(); }).then(function(data){
+      if (seq !== referralCheckSeq) return; // superseded by a newer keystroke
+      state.quote = data && data.ok ? data : localQuote();
+      currentTier = state.quote.tier || 'public';
+      if (state.quote.codeEntered && state.quote.codeRecognized && currentTier !== 'public') {
+        setTierRowLocked(currentTier, false, state.quote.salon, state.quote.addon);
+        els.codeNote.textContent = '口令已識別 · ' + state.quote.tierLabel + ' Code recognized.';
+        els.codeNote.className = 'recognized-note ok';
+      } else if (state.quote.codeEntered && state.quote.codeRecognized === false) {
+        currentTier = 'public';
+        els.codeNote.textContent = '口令未識別，將以公開報名價計算 Code not recognized — public pricing applied.';
+        els.codeNote.className = 'recognized-note miss';
+      } else {
+        currentTier = 'public';
+        els.codeNote.textContent = '';
+        els.codeNote.className = 'recognized-note';
+      }
+      state.quoteLoading = false;
+      refreshUI();
+    }).catch(function(){
+      if (seq !== referralCheckSeq) return;
+      state.quote = localQuote();
+      state.quoteLoading = false;
+      currentTier = 'public';
+      els.codeNote.textContent = v ? '將於送出時由系統核對口令 · Code will be verified on submit' : '';
+      els.codeNote.className = v ? 'recognized-note ok' : 'recognized-note';
+      refreshUI();
+    });
+  }
+  els.code.addEventListener('input', function(){
+    els.code.value = els.code.value.toUpperCase();
+    clearTimeout(referralCheckTimer);
+    referralCheckTimer = setTimeout(requestQuote, 180);
+  });
+  els.code.addEventListener('blur', requestQuote);
+
+  /* ---------- single-select pill groups ---------- */
+  function wirePillGroup(groupEl, onChange){
+    var pills = groupEl.querySelectorAll('.pill');
+    var radios = groupEl.querySelectorAll('input[type=radio]');
+    radios.forEach(function(radio){
+      radio.addEventListener('change', function(){
+        pills.forEach(function(p){ p.classList.toggle('active', p.querySelector('input').checked); });
+        onChange(radio.value);
+      });
+    });
+  }
+
+  var testingRevealWrap = document.getElementById('testingRevealWrap');
+  var consentHealthReveal = document.getElementById('consentHealthReveal');
+  wirePillGroup(document.getElementById('ticketGroup'), function(value){
+    state.ticketChoice = value;
+    clearError('ticketChoice');
+    var isMember = value === 'member';
+    testingRevealWrap.classList.toggle('open', isMember);
+    consentHealthReveal.classList.toggle('open', isMember);
+    if (!isMember) {
+      state.testingAck = false;
+      ackToggle.set(false);
+      state.consentHealth = false;
+      consentHealthToggle.set(false);
+    }
+    requestQuote();
+  });
+
+  wirePillGroup(document.getElementById('testingSlotGroup'), function(value){
+    state.testingSlot = value;
+    clearError('testingSlot');
+    refreshUI();
+  });
+
+  wirePillGroup(document.getElementById('workoutGroup'), function(value){
+    state.workoutPref = value;
+  });
+
+  var companionReveal = document.getElementById('companionReveal');
+  var companion2Card = document.getElementById('field-companion2');
+  wirePillGroup(document.getElementById('companionCountGroup'), function(value){
+    state.companionCount = parseInt(value, 10) || 0;
+    companionReveal.classList.toggle('open', state.companionCount > 0);
+    companion2Card.classList.toggle('open', state.companionCount >= 2);
+    if (state.companionCount < 1) clearError('companion1');
+    if (state.companionCount < 2) clearError('companion2');
+    requestQuote();
+  });
+
+  var ackToggle = (function(){
+    var row = document.getElementById('ackRow');
+    var box = document.getElementById('ackBox');
+    var on = false;
+    function set(v){
+      on = v;
+      box.classList.toggle('checked', on);
+      row.setAttribute('aria-checked', on ? 'true' : 'false');
+      state.testingAck = on;
+      clearError('testingAck');
+      refreshUI();
+    }
+    row.addEventListener('click', function(){ set(!on); });
+    row.addEventListener('keydown', function(e){ if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); set(!on); } });
+    return { get: function(){ return on; }, set: set };
+  })();
+
+  function bindConsent(rowId, boxId, key){
+    var row = document.getElementById(rowId);
+    var box = document.getElementById(boxId);
+    var on = false;
+    function set(v){
+      on = v;
+      box.classList.toggle('checked', on);
+      row.setAttribute('aria-checked', on ? 'true' : 'false');
+      state[key] = on;
+      clearError('consent');
+      refreshUI();
+    }
+    row.addEventListener('click', function(){ set(!on); });
+    row.addEventListener('keydown', function(e){ if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); set(!on); } });
+    return { get: function(){ return on; }, set: set };
+  }
+  var consentServiceToggle = bindConsent('consentServiceRow', 'consentServiceBox', 'consentService');
+  var consentPrivacyToggle = bindConsent('consentPrivacyRow', 'consentPrivacyBox', 'consentPrivacy');
+  var consentHealthToggle = bindConsent('consentHealthRow', 'consentHealthBox', 'consentHealth');
+
+  /* ---------- validation ---------- */
+  function showError(field, msg){
+    var wrap = document.getElementById('field-' + field);
+    var err = document.getElementById('err-' + field);
+    if (wrap) wrap.classList.add('invalid');
+    if (err) { err.textContent = msg; err.classList.add('show'); }
+  }
+  function clearError(field){
+    var wrap = document.getElementById('field-' + field);
+    var err = document.getElementById('err-' + field);
+    if (wrap) wrap.classList.remove('invalid');
+    if (err) { err.textContent = ''; err.classList.remove('show'); }
+  }
+
+  function validateField(field, showIfBlurred){
+    var name = els.name.value.trim();
+    var wechat = els.wechat.value.trim();
+    var phone = els.phone.value.trim();
+
+    if (field === 'name') {
+      if (name.length < 1) { if (showIfBlurred) showError('name', '請填寫姓名 Name is required'); return false; }
+      clearError('name'); return true;
+    }
+    if (field === 'wechatId') {
+      if (wechat.length < 2) { if (showIfBlurred) showError('wechatId', '請填寫微信號 WeChat ID is required'); return false; }
+      clearError('wechatId'); return true;
+    }
+    if (field === 'phone') {
+      var digits = (phone.match(/\d/g) || []).length;
+      var looksLikePhone = phone.length <= 32 && digits >= 7 && /^[+\d][\d\s\-()]*$/.test(phone);
+      var looksLikeEmail = phone.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(phone);
+      if (phone && !looksLikePhone && !looksLikeEmail) {
+        if (showIfBlurred) showError('phone', '請填寫有效手機號碼或郵箱，或留空 Enter a valid phone/email or leave blank');
+        return false;
+      }
+      clearError('phone'); return true;
+    }
+    var isMember = state.ticketChoice === 'member';
+    if (field === 'testingSlot') {
+      if (isMember && !state.testingSlot) {
+        if (showIfBlurred) showError('testingSlot', '請選擇生物標誌物檢測時段');
+        return false;
+      }
+      clearError('testingSlot'); return true;
+    }
+    if (field === 'testingAck') {
+      if (isMember && !state.testingAck) {
+        if (showIfBlurred) showError('testingAck', '請先確認已閱讀檢測前須知 Please acknowledge testing prep');
+        return false;
+      }
+      clearError('testingAck'); return true;
+    }
+    if (field === 'companion1') {
+      if (state.companionCount >= 1 && (!els.companion1Name.value.trim() || !els.companion1Wechat.value.trim())) {
+        if (showIfBlurred) showError('companion1', '請填寫同行者姓名與微信號');
+        return false;
+      }
+      clearError('companion1'); return true;
+    }
+    if (field === 'companion2') {
+      if (state.companionCount >= 2 && (!els.companion2Name.value.trim() || !els.companion2Wechat.value.trim())) {
+        if (showIfBlurred) showError('companion2', '請填寫第二位同行者姓名與微信號');
+        return false;
+      }
+      clearError('companion2'); return true;
+    }
+    if (field === 'consent') {
+      if (!state.consentService || !state.consentPrivacy) {
+        if (showIfBlurred) showError('consent', '請閱讀並同意服務協議與隱私政策 Please agree to both required documents');
+        return false;
+      }
+      if (isMember && !state.consentHealth) {
+        if (showIfBlurred) showError('consent', '選擇檢測需另外同意健康知情同意書 Testing requires health consent');
+        return false;
+      }
+      clearError('consent'); return true;
+    }
+    return true;
+  }
+
+  function validateAll(){
+    var ok = true;
+    ['name','wechatId','phone','testingSlot','testingAck','companion1','companion2','consent'].forEach(function(f){
+      if (!validateField(f, false)) ok = false;
+    });
+    els.submitBtn.disabled = !ok || state.submitting;
+    return ok;
+  }
+
+  [els.name, els.wechat, els.phone].forEach(function(input){
+    var field = input.id === 'in-name' ? 'name' : (input.id === 'in-wechat' ? 'wechatId' : 'phone');
+    input.addEventListener('input', function(){ clearError(field); refreshUI(); });
+    input.addEventListener('blur', function(){ validateField(field, true); refreshUI(); });
+  });
+  [els.companion1Name, els.companion1Wechat, els.companion2Name, els.companion2Wechat].forEach(function(input){
+    input.addEventListener('input', refreshUI);
+  });
+  els.notes.addEventListener('input', refreshUI);
+
+  /* ---------- form-level alert ---------- */
+  function showAlert(msg){
+    els.formAlert.textContent = msg;
+    els.formAlert.classList.add('show');
+  }
+  function hideAlert(){
+    els.formAlert.textContent = '';
+    els.formAlert.classList.remove('show');
+  }
+
+  /* ---------- submit ---------- */
+  var form = document.getElementById('rsvpForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    hideAlert();
+
+    ['name','wechatId','phone','testingSlot','testingAck','companion1','companion2','consent'].forEach(function(f){ validateField(f, true); });
+    if (!validateAll()) {
+      showAlert('請檢查表單中標示的欄位 · Please review the highlighted fields');
+      var firstInvalid = document.querySelector('.field.invalid');
+      if (firstInvalid) firstInvalid.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+      return;
+    }
+
+    state.submitting = true;
+    els.submitBtn.disabled = true;
+    var originalLabel = els.submitBtn.textContent;
+    els.submitBtn.innerHTML = '<span class="spinner"></span>處理中 · Processing…';
+
+    var payload = {
+      name: els.name.value.trim(),
+      wechatId: els.wechat.value.trim(),
+      phone: els.phone.value.trim(),
+      companyTitle: els.company.value.trim(),
+      referralCode: els.code.value.trim(),
+      inviterName: els.inviter.value.trim(),
+      ticketChoice: state.ticketChoice,
+      testingSlot: state.testingSlot || '',
+      workoutPref: state.workoutPref,
+      companionCount: state.companionCount,
+      companion1: { name: els.companion1Name.value.trim(), wechat: els.companion1Wechat.value.trim() },
+      companion2: { name: els.companion2Name.value.trim(), wechat: els.companion2Wechat.value.trim() },
+      topicInterest: els.topic.value.trim(),
+      healthChallenge: els.health.value.trim(),
+      notes: els.notes.value.trim(),
+      testingAck: state.testingAck,
+      consent: { service: state.consentService, privacy: state.consentPrivacy, health: state.consentHealth }
+    };
+
+    fetch('/api/register-v2', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      return res.json().then(function(data){ return { status: res.status, data: data }; });
+    }).then(function(result){
+      var status = result.status, data = result.data;
+
+      if (status === 201 && data.ok) {
+        showConfirmation(data, false);
+        return;
+      }
+      if (status === 409 && data.error === 'duplicate') {
+        showConfirmation(data.registration, true, data.message);
+        return;
+      }
+      if (status === 400) {
+        handleValidationError(data);
+        return;
+      }
+      if (status === 500) {
+        showAlert(data.message || '伺服器錯誤，請稍後重試 · Server error, please retry');
+        resetSubmitBtn(originalLabel);
+        return;
+      }
+      showAlert('發生未預期的錯誤，請稍後重試 · Unexpected error, please retry');
+      resetSubmitBtn(originalLabel);
+    }).catch(function(){
+      showAlert('網絡錯誤，請檢查網絡後重試');
+      resetSubmitBtn(originalLabel);
+    });
+  });
+
+  function resetSubmitBtn(label){
+    state.submitting = false;
+    refreshUI();
+  }
+
+  function handleValidationError(data){
+    state.submitting = false;
+    if (data.error === 'validation' && data.field) {
+      showError(data.field, data.message || '請檢查此欄位');
+      showAlert(data.message || '請檢查表單欄位');
+    } else if (data.error === 'testing_ack_required') {
+      showError('testingAck', data.message || '請先確認已閱讀檢測前須知');
+      showAlert(data.message || '請先確認已閱讀檢測前須知');
+    } else if (data.error === 'consent_required' || data.error === 'health_consent_required') {
+      showError('consent', data.message || '請確認同意條款');
+      showAlert(data.message || '請確認同意條款');
+    } else {
+      showAlert(data.message || '請檢查表單後重試');
+    }
+    refreshUI();
+    var firstInvalid = document.querySelector('.field.invalid');
+    if (firstInvalid) firstInvalid.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+  }
+
+  /* ---------- confirmation ---------- */
+  function tierDisplayLabel(tier, fallbackLabel){
+    if (fallbackLabel) return fallbackLabel;
+    var t = TIERS[tier];
+    return t ? t.label : tier;
+  }
+
+  function showConfirmation(data, isDuplicate, duplicateMsg){
+    document.getElementById('formPanel').style.display = 'none';
+
+    var panel = document.getElementById('confirmPanel');
+    document.getElementById('confirmRefCode').textContent = data.ref || '—';
+    document.getElementById('confirmName').textContent = data.name || els.name.value.trim();
+    document.getElementById('confirmTier').textContent = tierDisplayLabel(data.tier, data.tierLabel);
+
+    var ticketChoice = data.ticketChoice;
+    var ticketLabel = ticketChoice === 'member' ? '會員席 Member Seat'
+      : ticketChoice === 'decide_onsite' ? '到現場再決定（暫以沙龍席計價）'
+      : '沙龍席 Salon Seat';
+    document.getElementById('confirmTicket').textContent = ticketLabel;
+
+    var wantsTesting = typeof data.wantsTesting === 'boolean' ? data.wantsTesting : (state.ticketChoice === 'member');
+    document.getElementById('confirmTesting').textContent = wantsTesting ? '含 · 60+ markers' : '不含';
+
+    var companionCount = typeof data.companionCount === 'number' ? data.companionCount : state.companionCount;
+    document.getElementById('confirmCompanion').textContent = companionCount > 0 ? ('是 Yes ×' + companionCount + '（8 折）') : '否 No';
+
+    var amountDue = typeof data.amountDue === 'number' ? data.amountDue : 0;
+    var amountEl = document.getElementById('confirmAmount');
+    amountEl.textContent = '¥' + amountDue.toLocaleString('en-US');
+    amountEl.className = 'v confirm-amount ' + (amountDue > 0 ? 'due' : 'free');
+
+    var missNote = document.getElementById('codeMissNote');
+    if (!isDuplicate && data.codeRecognized === false) {
+      missNote.style.display = 'block';
+      missNote.textContent = '推薦碼未識別，已按公開價計算 · Referral code not recognized — public pricing applied';
+    } else {
+      missNote.style.display = 'none';
+    }
+
+    var payBlock = document.getElementById('payBlock');
+    var payInstructions = document.getElementById('payInstructions');
+    if (amountDue > 0) {
+      payBlock.style.display = 'block';
+      payInstructions.innerHTML = '請於 24 小時內長按識別下方二維碼添加企業微信，並備註【' +
+        escapeHTML(data.name || els.name.value.trim()) + ' + ' + escapeHTML(data.ref || '') +
+        '】完成支付，完成後席位即確認保留。<br><span style="color:var(--slate); font-size:12px">Please add the event WeChat within 24 hours via the QR below, note your name + ref code, and complete payment to confirm your seat.</span>';
+    } else {
+      payBlock.style.display = 'block';
+      payInstructions.innerHTML = '已確認 · VIP 全程免費。歡迎添加下方企業微信，方便活動當日聯繫與提醒。<br><span style="color:var(--slate); font-size:12px">Confirmed — complimentary VIP seat. Add the event WeChat below for day-of logistics.</span>';
+    }
+
+    if (isDuplicate && duplicateMsg) {
+      showAlertOnConfirm(duplicateMsg);
+    }
+
+    panel.classList.add('show');
+    panel.setAttribute('tabindex', '-1');
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    setTimeout(function(){ panel.focus(); }, reduceMotion ? 0 : 350);
+  }
+
+  function showAlertOnConfirm(msg){
+    var note = document.createElement('div');
+    note.style.cssText = 'font-family:var(--mono);font-size:11.5px;color:var(--cyan-glow);margin-bottom:16px;';
+    note.textContent = msg;
+    var panel = document.getElementById('confirmPanel');
+    panel.insertBefore(note, panel.children[1]);
+  }
+
+  function escapeHTML(s){
+    return String(s).replace(/[&<>"']/g, function(c){
+      return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c];
+    });
+  }
+
+  /* ---------- init ---------- */
+  requestQuote();
+})();
+</script>
+</body>
+</html>

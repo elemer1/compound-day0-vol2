@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>未來人 Day 0 · 上海 Vol.2 · 報名登記</title>
+<meta name="description" content="Compound · 未來人 Day 0 · 2026.07.11 · 上海。設定你的 t=0，開始生命複利 — 生物標誌基線、Longevity 科學前沿、長壽智能體。Set your t=0. Begin compounding your life.">
+<meta name="theme-color" content="#06070A">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="未來人 Day 0 · 上海 Vol.2 · Compound">
+<meta property="og:description" content="設定你的 t=0，開始生命複利。7 月 11 日，上海。Set your t=0. Begin compounding your life.">
+<meta property="og:image" content="/assets/day0/poster-v8-blue-portrait.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/compound-mark.png">
+<style>
+:root{
+  --ink:#06070A;
+  --glass-dark:#10131C;
+  --text-ink:#12161F;
+  --indigo:#16224A;
+  --cobalt:#2A4FE0;
+  --cobalt-hot:#3F6BFF;
+  --cyan-glow:#6FD3E8;
+  --ice:#E7EEF2;
+  --paper:#F4F7F8;
+  --slate:#7C8794;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+  --serif:'Noto Serif TC','Songti SC',serif;
+  --sans:'IBM Plex Sans','Noto Sans TC',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+  position:relative;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:none}
+input,textarea,select{font:inherit;color:inherit;outline:none}
+img{display:block;max-width:100%}
+::selection{background:var(--cobalt-hot);color:var(--paper)}
+
+/* ---------- persistent gallery frame ---------- */
+.corner{position:fixed;width:20px;height:20px;border:1px solid rgba(111,211,232,.30);z-index:90;pointer-events:none}
+.corner.tl{top:14px;left:14px;border-right:none;border-bottom:none}
+.corner.tr{top:14px;right:14px;border-left:none;border-bottom:none}
+.corner.bl{bottom:14px;left:14px;border-right:none;border-top:none}
+.corner.br{bottom:14px;right:14px;border-left:none;border-top:none}
+
+/* ---------- reticle motif ---------- */
+.reticle{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:9px;height:9px;border:1px solid var(--cyan-glow);
+  position:relative;flex-shrink:0;
+}
+.reticle::after{
+  content:"";position:absolute;width:1.5px;height:1.5px;
+  background:var(--cyan-glow);border-radius:50%;
+}
+.reticle.paper{border-color:var(--paper)}
+.reticle.paper::after{background:var(--paper)}
+.reticle.nested{width:11px;height:11px}
+.reticle.nested .reticle-inner{
+  position:absolute;width:5px;height:5px;border:1px solid var(--cyan-glow);
+}
+.reticle-tag{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ice);
+}
+
+/* ---------- top bar ---------- */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:60;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 22px;
+  transition:background .4s ease, backdrop-filter .4s ease, border-color .4s ease;
+  border-bottom:1px solid transparent;
+}
+.topbar.scrolled{
+  background:rgba(6,7,10,.72);
+  backdrop-filter:blur(10px) saturate(140%);
+  -webkit-backdrop-filter:blur(10px) saturate(140%);
+  border-bottom:1px solid rgba(244,247,248,.08);
+}
+.brand-lockup{display:flex;align-items:center;gap:9px}
+.brand-chip{
+  width:21px;height:21px;border-radius:50%;
+  background:rgba(244,247,248,.94);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.brand-chip img{width:60%;height:60%;object-fit:contain}
+.brand-word{
+  font-family:var(--sans);text-transform:uppercase;
+  letter-spacing:.16em;font-size:9.5px;color:var(--paper);font-weight:500;
+}
+.nav-date{
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  color:var(--slate);
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;min-height:78vh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;
+}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.hero-scrim-top{
+  position:absolute;top:0;left:0;right:0;height:34%;z-index:1;
+  background:linear-gradient(to bottom, rgba(6,7,10,.72), rgba(6,7,10,0));
+}
+.hero-scrim-bottom{
+  position:absolute;bottom:0;left:0;right:0;height:58%;z-index:1;
+  background:linear-gradient(to bottom, rgba(6,7,10,0), rgba(6,7,10,.86) 70%, var(--ink) 100%);
+}
+.hero-top{
+  position:absolute;top:0;left:0;right:0;z-index:2;padding:64px 22px 0;
+  display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;
+}
+.eyebrow{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ice);opacity:.92;
+}
+.hero-tags{position:absolute;inset:0;z-index:2;pointer-events:none}
+.floating-tag{
+  position:absolute;
+  display:flex;align-items:center;gap:7px;
+  animation:fadeUp .9s ease both;
+}
+.floating-tag .reticle-tag{background:rgba(6,7,10,.32);padding:3px 8px 3px 3px;border-radius:2px;backdrop-filter:blur(2px)}
+.tag-see{top:30%;left:6%}
+.tag-understand{top:24%;right:7%}
+.tag-compound{bottom:14%;left:50%;transform:translateX(-50%)}
+.hero-bottom{
+  position:relative;z-index:2;padding:0 22px 56px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;
+}
+.hero-title{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(48px, 13vw, 96px);
+  line-height:1.02;color:var(--paper);
+  text-shadow:0 0 40px rgba(63,107,255,.45), 0 0 90px rgba(111,211,232,.18);
+  letter-spacing:.01em;
+}
+.hero-sub{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;
+  color:var(--cyan-glow);text-transform:uppercase;
+}
+.hero-tagline-cjk{
+  font-family:var(--serif);font-size:clamp(17px,3.6vw,22px);
+  color:var(--ice);font-weight:400;max-width:560px;
+}
+.hero-tagline-en{
+  font-family:var(--sans);font-size:13px;color:var(--slate);
+  max-width:480px;font-weight:300;
+}
+.t0{color:var(--cobalt-hot);font-style:italic;font-family:var(--mono);text-shadow:0 0 16px rgba(63,107,255,.65)}
+.scroll-cue{
+  margin-top:10px;display:flex;flex-direction:column;align-items:center;gap:6px;
+  opacity:.7;
+}
+.scroll-cue .line{width:1px;height:30px;background:linear-gradient(to bottom, var(--cyan-glow), transparent);animation:pulseLine 2.2s ease-in-out infinite}
+
+/* ---------- section shell ---------- */
+section{position:relative;z-index:2;padding:88px 22px;max-width:960px;margin:0 auto}
+.section-eyebrow{
+  display:flex;align-items:center;gap:10px;margin-bottom:34px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--slate);
+}
+.hairline{height:1px;background:rgba(244,247,248,.14);border:none;max-width:960px;margin:0 auto}
+
+/* ---------- intro ---------- */
+.intro{max-width:760px}
+.intro p{margin-bottom:20px}
+.intro-cjk{font-size:16.5px;line-height:1.95;color:var(--ice);font-weight:300}
+.intro-en{font-size:13px;line-height:1.85;color:var(--slate);font-weight:300}
+
+/* ---------- take-home grid ---------- */
+.grid-take{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  position:relative;
+}
+.take-cell{
+  padding:0 18px;text-align:center;position:relative;
+  display:flex;flex-direction:column;align-items:center;gap:14px;
+}
+.take-cell + .take-cell{border-left:1px solid transparent;position:relative}
+.take-cell + .take-cell::before{
+  content:"";position:absolute;left:0;top:14%;bottom:14%;width:1px;
+  background:linear-gradient(to bottom, transparent, rgba(244,247,248,.18) 30%, rgba(244,247,248,.18) 70%, transparent);
+}
+.take-glyph{
+  font-family:var(--serif);font-weight:700;font-size:44px;line-height:1;
+  color:var(--paper);
+  text-shadow:0 0 18px rgba(111,211,232,.55), 0 0 36px rgba(63,107,255,.35);
+}
+.take-word{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--cyan-glow)}
+.take-gloss{font-family:var(--sans);font-size:12px;color:var(--slate);line-height:1.6}
+
+/* ---------- agenda ---------- */
+.agenda{position:relative;padding-left:8px}
+.agenda-row{
+  position:relative;display:grid;grid-template-columns:96px 1fr;gap:22px;
+  padding:22px 0;
+}
+.agenda-row::before{
+  content:"";position:absolute;left:5px;top:0;bottom:0;width:1px;
+  background:rgba(244,247,248,.14);
+}
+.agenda-row:first-child::before{top:14px}
+.agenda-row:last-child::before{bottom:calc(100% - 14px)}
+.agenda-tick{
+  position:absolute;left:0;top:24px;
+}
+.agenda-time{
+  font-family:var(--mono);font-size:12px;color:var(--cyan-glow);
+  letter-spacing:.02em;padding-left:20px;
+}
+.agenda-title-cjk{font-family:var(--serif);font-size:18px;color:var(--paper);margin-bottom:6px;line-height:1.5}
+.agenda-title-en{font-family:var(--sans);font-size:12.5px;color:var(--slate);font-weight:300;line-height:1.6}
+
+.speakers-block{margin-top:44px;padding-top:32px;border-top:1px solid rgba(244,247,248,.1)}
+.speakers-line{font-family:var(--sans);font-size:14px;color:var(--ice);line-height:2;font-weight:300}
+.credentials-line{
+  margin-top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;
+  color:var(--slate);line-height:1.9;
+}
+
+/* ---------- logistics ---------- */
+.logistics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.logistics-item{display:flex;flex-direction:column;gap:8px}
+.logistics-label{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--slate);
+}
+.logistics-value{font-family:var(--serif);font-size:17px;color:var(--paper);line-height:1.5}
+.logistics-value small{display:block;font-family:var(--sans);font-size:11.5px;color:var(--slate);margin-top:4px;font-weight:300}
+
+/* ---------- pricing ---------- */
+.pricing-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:26px}
+.pricing-cards.three{grid-template-columns:1fr 1fr 1fr}
+.spec-card{
+  border:1px solid rgba(244,247,248,.16);
+  padding:26px 22px;position:relative;
+  transition:border-color .4s ease, box-shadow .4s ease, opacity .4s ease;
+  opacity:.5;
+  display:block;width:100%;text-align:left;cursor:pointer;background:none;
+  font:inherit;color:inherit;
+}
+.spec-card:hover{opacity:.75}
+.spec-card:focus-visible{outline:1px solid var(--cyan-glow);outline-offset:3px}
+.spec-card.active{
+  border-color:var(--cobalt-hot);
+  box-shadow:0 0 0 1px rgba(63,107,255,.25), 0 0 32px rgba(63,107,255,.18);
+  opacity:1;
+}
+.spec-card-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.spec-card.active .spec-card-label{color:var(--cyan-glow)}
+.spec-card-title{font-family:var(--serif);font-size:20px;color:var(--paper);margin-bottom:14px}
+.spec-card-price{font-family:var(--mono);font-size:28px;color:var(--paper);letter-spacing:-.01em}
+.spec-card.active .spec-card-price{color:var(--cobalt-hot);text-shadow:0 0 24px rgba(63,107,255,.4)}
+.spec-card-price small{font-family:var(--sans);font-size:11px;color:var(--slate);font-weight:300}
+.spec-card-note{margin-top:10px;font-family:var(--sans);font-size:11.5px;color:var(--slate);line-height:1.7;font-weight:300}
+
+.referral-hint{
+  font-family:var(--sans);font-size:12px;color:var(--slate);font-weight:300;
+  display:flex;align-items:flex-start;gap:9px;margin-top:8px;line-height:1.7;
+}
+.perks-note{
+  margin-top:26px;padding:16px 18px;border:1px solid rgba(111,211,232,.22);
+  font-family:var(--sans);font-size:12.5px;color:var(--ice);line-height:1.85;font-weight:300;
+  display:flex;gap:10px;
+}
+
+/* ---------- choice pills (radio-style, used for testing slot / workout / companion count) ---------- */
+.choice-group{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.choice-pill{
+  position:relative;
+  display:flex;align-items:center;gap:9px;padding:11px 15px;
+  border:1px solid rgba(244,247,248,.24);cursor:pointer;
+  font-family:var(--sans);font-size:13.5px;color:var(--ice);
+  transition:border-color .25s ease, background .25s ease, color .25s ease;
+}
+.choice-pill:hover{border-color:rgba(244,247,248,.5)}
+.choice-pill.active{
+  border-color:var(--cobalt-hot);color:var(--paper);
+  background:rgba(63,107,255,.1);box-shadow:0 0 0 1px rgba(63,107,255,.2);
+}
+.choice-pill input{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.choice-pill .dot{width:9px;height:9px;border:1px solid rgba(244,247,248,.4);border-radius:50%;flex-shrink:0;position:relative}
+.choice-pill.active .dot{border-color:var(--cobalt-hot)}
+.choice-pill.active .dot::after{content:"";position:absolute;inset:2px;background:var(--cobalt-hot);border-radius:50%;box-shadow:0 0 8px rgba(63,107,255,.7)}
+
+.companion-slot{
+  margin-top:14px;padding:16px 16px 4px;border:1px solid rgba(244,247,248,.14);
+}
+.companion-slot-label{
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--cyan-glow);margin-bottom:12px;
+}
+.companion-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* ---------- form ---------- */
+.form-section{max-width:640px}
+.field{margin-bottom:26px;position:relative}
+.field-label{
+  display:flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--slate);margin-bottom:10px;
+}
+.field-label .req{color:var(--cobalt-hot)}
+.field input[type="text"], .field input[type="tel"], .field textarea{
+  width:100%;background:transparent;border:none;
+  border-bottom:1px solid rgba(244,247,248,.24);
+  padding:10px 2px;font-family:var(--sans);font-size:15.5px;color:var(--paper);
+  transition:border-color .3s ease, box-shadow .3s ease;
+}
+.field input::placeholder, .field textarea::placeholder{color:rgba(124,135,148,.7);font-weight:300}
+.field input:focus, .field textarea:focus{
+  border-bottom-color:var(--cobalt-hot);
+  box-shadow:0 1px 0 0 rgba(63,107,255,.5), 0 4px 18px -6px rgba(63,107,255,.4);
+}
+.field textarea{resize:vertical;min-height:76px;border:1px solid rgba(244,247,248,.24);padding:12px}
+.field textarea:focus{border-color:var(--cobalt-hot)}
+.field-error{
+  display:none;margin-top:8px;font-family:var(--mono);font-size:11.5px;color:#FF9E9E;
+  align-items:center;gap:6px;
+}
+.field-error.show{display:flex}
+.field-hint{margin-top:8px;font-family:var(--sans);font-size:11.5px;color:var(--slate);font-weight:300}
+.field.invalid input, .field.invalid textarea{border-bottom-color:#FF9E9E}
+
+/* toggle row (checkbox / switch style with reticle) */
+.toggle-row{
+  display:flex;align-items:flex-start;gap:13px;padding:14px 0;
+  cursor:pointer;
+}
+.toggle-box{
+  width:16px;height:16px;border:1px solid rgba(244,247,248,.35);
+  flex-shrink:0;margin-top:2px;position:relative;transition:border-color .25s ease, box-shadow .25s ease;
+}
+.toggle-box::after{
+  content:"";position:absolute;inset:3px;background:var(--cobalt-hot);
+  opacity:0;transform:scale(.5);transition:opacity .2s ease, transform .2s ease;
+  box-shadow:0 0 10px rgba(63,107,255,.7);
+}
+.toggle-row.checked .toggle-box{border-color:var(--cobalt-hot);box-shadow:0 0 0 3px rgba(63,107,255,.15)}
+.toggle-row.checked .toggle-box::after{opacity:1;transform:scale(1)}
+.toggle-copy{flex:1}
+.toggle-title{font-family:var(--sans);font-size:14.5px;color:var(--paper);line-height:1.55}
+.toggle-sub{font-family:var(--sans);font-size:12px;color:var(--slate);margin-top:3px;line-height:1.6;font-weight:300}
+.toggle-price{font-family:var(--mono);font-size:12.5px;color:var(--cyan-glow);margin-left:6px}
+.toggle-row input[type="checkbox"]{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+
+.reveal{
+  overflow:hidden;max-height:0;opacity:0;transition:max-height .45s ease, opacity .35s ease, margin .35s ease;
+}
+.reveal.open{max-height:600px;opacity:1;margin-top:6px}
+
+.prep-summary{
+  margin:10px 0 4px 29px;padding:12px 14px;border:1px solid rgba(244,247,248,.14);
+  font-family:var(--sans);font-size:11.5px;color:var(--slate);line-height:1.85;font-weight:300;
+}
+.prep-summary b{color:var(--ice);font-weight:500}
+
+.consent-block{margin-top:8px;margin-bottom:8px}
+.consent-link{color:var(--cyan-glow);text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(111,211,232,.4)}
+.consent-link:hover{text-decoration-color:var(--cyan-glow)}
+/* Deliberately NOT nested inside the checkbox <label> — a link overlapping a
+   clickable toggle's hit area is fragile (a tap can land on both at once)
+   and, since this page's primary audience opens it inside WeChat's in-app
+   browser (unreliable target="_blank" handling), risky enough to wipe the
+   guest's filled-in form. Kept as its own row below each checkbox. */
+.legal-links-row{margin:6px 0 4px 29px;display:flex;gap:18px;font-size:11px}
+
+.running-total{
+  display:flex;align-items:baseline;justify-content:space-between;
+  padding:22px 0;border-top:1px solid rgba(244,247,248,.14);
+  margin-top:8px;margin-bottom:24px;
+}
+.running-total-label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
+.running-total-value{font-family:var(--mono);font-size:26px;color:var(--cobalt-hot);text-shadow:0 0 20px rgba(63,107,255,.4)}
+.running-total-value.zero{color:var(--cyan-glow)}
+
+.submit-btn{
+  width:100%;padding:18px 24px;background:var(--cobalt-hot);color:var(--paper);
+  font-family:var(--mono);font-size:14px;letter-spacing:.05em;text-transform:uppercase;
+  border-radius:2px;transition:opacity .25s ease, box-shadow .25s ease, transform .15s ease;
+  box-shadow:0 8px 30px -8px rgba(63,107,255,.55);
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.submit-btn:disabled{background:rgba(244,247,248,.1);color:var(--slate);box-shadow:none;cursor:not-allowed}
+.submit-btn:not(:disabled):hover{box-shadow:0 10px 36px -6px rgba(63,107,255,.7);transform:translateY(-1px)}
+.submit-btn:not(:disabled):active{transform:translateY(0)}
+.spinner{
+  width:14px;height:14px;border:2px solid rgba(244,247,248,.35);border-top-color:var(--paper);
+  border-radius:50%;animation:spin .7s linear infinite;display:none;
+}
+.submit-btn.loading .spinner{display:inline-block}
+.submit-btn.loading .btn-label{opacity:.75}
+
+.form-error-banner{
+  display:none;margin-bottom:22px;padding:14px 16px;border:1px solid rgba(255,158,158,.4);
+  background:rgba(255,158,158,.06);font-family:var(--sans);font-size:13px;color:#FFB8B8;
+  line-height:1.7;
+}
+.form-error-banner.show{display:block}
+.soft-note{
+  margin-top:10px;padding:11px 14px;border:1px solid rgba(111,211,232,.25);
+  font-family:var(--sans);font-size:12px;color:var(--cyan-glow);line-height:1.7;
+}
+
+/* ---------- confirmation ---------- */
+.confirm-section{display:none;max-width:600px}
+.confirm-section.show{display:block}
+.confirm-mark{display:flex;justify-content:center;margin-bottom:22px}
+.confirm-ref{
+  text-align:center;font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--slate);
+  text-transform:uppercase;margin-bottom:6px;
+}
+.confirm-refcode{
+  text-align:center;font-family:var(--serif);font-size:34px;color:var(--paper);margin-bottom:32px;
+  text-shadow:0 0 30px rgba(63,107,255,.35);
+}
+.order-card{border:1px solid rgba(244,247,248,.18);padding:28px 26px;margin-bottom:26px}
+.order-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid rgba(244,247,248,.08)}
+.order-row:last-child{border-bottom:none}
+.order-row .k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate)}
+.order-row .v{font-family:var(--sans);font-size:14.5px;color:var(--paper);text-align:right}
+.order-row.total .v{font-family:var(--mono);font-size:24px;color:var(--cobalt-hot)}
+.order-row.total .v.zero{color:var(--cyan-glow)}
+.pay-instructions{
+  font-family:var(--sans);font-size:14px;color:var(--ice);line-height:1.9;margin-bottom:22px;font-weight:300;
+}
+.qr-card{
+  border:1px solid rgba(244,247,248,.2);padding:22px;display:flex;flex-direction:column;
+  align-items:center;gap:14px;max-width:280px;margin:0 auto 30px;
+}
+.qr-card img{width:190px;height:190px}
+.qr-card-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
+.save-note{
+  text-align:center;font-family:var(--sans);font-size:12.5px;color:var(--slate);font-weight:300;
+  margin-bottom:8px;
+}
+
+/* ---------- footer ---------- */
+footer{
+  position:relative;z-index:2;padding:56px 22px 100px;max-width:960px;margin:0 auto;
+  text-align:center;
+}
+.footer-brand{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--slate);margin-bottom:14px}
+.footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:18px;flex-wrap:wrap}
+.footer-links a{font-family:var(--sans);font-size:12.5px;color:var(--ice);border-bottom:1px solid rgba(244,247,248,.25)}
+.footer-links a:hover{border-bottom-color:var(--cyan-glow);color:var(--cyan-glow)}
+.footer-fine{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--slate);opacity:.7}
+
+/* ---------- reveal-on-scroll ---------- */
+.fx{opacity:1;transform:none;transition:opacity .8s ease, transform .8s ease}
+.fx.in{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  .fx{opacity:1;transform:none;transition:none}
+  .floating-tag{animation:none}
+  .scroll-cue .line{animation:none}
+}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulseLine{0%,100%{opacity:.3}50%{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .grid-take{grid-template-columns:1fr 1fr;row-gap:36px}
+  .take-cell + .take-cell::before{display:none}
+  .take-cell:nth-child(odd){border-right:1px solid rgba(244,247,248,.1)}
+  .logistics-grid{grid-template-columns:1fr;gap:24px}
+  .pricing-cards, .pricing-cards.three{grid-template-columns:1fr}
+  .floating-tag{display:none}
+}
+@media (max-width:640px){
+  section{padding:64px 18px}
+  .hero{min-height:82vh}
+  .hero-title{font-size:clamp(42px,15vw,64px)}
+  .agenda-row{grid-template-columns:78px 1fr;gap:14px}
+  .corner{width:14px;height:14px}
+  .companion-fields{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="corner tl" aria-hidden="true"></div>
+<div class="corner tr" aria-hidden="true"></div>
+<div class="corner bl" aria-hidden="true"></div>
+<div class="corner br" aria-hidden="true"></div>
+
+<header class="topbar" id="topbar">
+  <div class="brand-lockup">
+    <span class="brand-chip"><img src="/assets/compound-mark.png" alt=""></span>
+    <span class="brand-word">COMPOUND</span>
+  </div>
+  <div class="nav-date">07.11 · SHANGHAI</div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Hero">
+    <div class="hero-media"><img src="/assets/day0/hero-original.png" alt="三個側影於藍色網格光幕前，象徵未來人的共同探索"></div>
+    <div class="hero-scrim-top" aria-hidden="true"></div>
+    <div class="hero-tags" aria-hidden="true">
+      <div class="floating-tag tag-see" style="animation-delay:.15s">
+        <span class="reticle-tag"><span class="reticle nested"><span class="reticle-inner"></span></span>SEE · 生物標誌</span>
+      </div>
+      <div class="floating-tag tag-understand" style="animation-delay:.35s">
+        <span class="reticle-tag"><span class="reticle nested"><span class="reticle-inner"></span></span>UNDERSTAND · SCIENCE</span>
+      </div>
+      <div class="floating-tag tag-compound" style="animation-delay:.55s">
+        <span class="reticle-tag"><span class="reticle nested"><span class="reticle-inner"></span></span>COMPOUND · AGENT</span>
+      </div>
+    </div>
+    <div class="hero-top">
+      <span class="eyebrow">A FUTURE HUMAN'S DAY ZERO · 上海 · VOL.2 · MMXXVI</span>
+    </div>
+    <div class="hero-scrim-bottom" aria-hidden="true"></div>
+    <div class="hero-bottom">
+      <h1 class="hero-title">未來人 <span style="white-space:nowrap">Day 0</span></h1>
+      <div class="hero-sub">Day 0 · 第零日</div>
+      <p class="hero-tagline-cjk">設定你的 <span class="t0">t=0</span>，開始生命複利。</p>
+      <p class="hero-tagline-en">Set your <span class="t0">t=0</span>. Begin compounding your life.</p>
+      <div class="scroll-cue" aria-hidden="true"><span class="line"></span></div>
+    </div>
+  </section>
+
+  <section class="intro fx" aria-label="Introduction">
+    <div class="section-eyebrow"><span class="reticle"></span>ABOUT · 關於這場早餐會</div>
+    <p class="intro-cjk">設定你的 <span class="t0">t=0</span>，開始生命複利。Compound 正在打造一個以科學驅動的「longevity 健康複利」生活方式社區。我們假設生命不必線性累加，而可以複利。7 月 11 日上午，我們將舉辦上海首場「Compounder 未來人 Day 0」沙龍工作坊。</p>
+    <p class="intro-en">Set your t=0. Begin compounding your life. Compound is building a science-led community for compounding life — life need not merely accumulate; it can compound. On the morning of July 11, we host Shanghai's first "Compounder Future Human Day 0" salon workshop.</p>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="fx" aria-label="What you take home">
+    <div class="section-eyebrow"><span class="reticle"></span>WHAT YOU TAKE HOME · 你將帶走什麼</div>
+    <div class="grid-take">
+      <div class="take-cell">
+        <span class="reticle paper"></span>
+        <div class="take-glyph">見</div>
+        <div class="take-word">SEE</div>
+        <div class="take-gloss">生物標誌基線<br>Biomarkers</div>
+      </div>
+      <div class="take-cell">
+        <span class="reticle paper"></span>
+        <div class="take-glyph">知</div>
+        <div class="take-word">UNDERSTAND</div>
+        <div class="take-gloss">Longevity Science<br>科學認知</div>
+      </div>
+      <div class="take-cell">
+        <span class="reticle paper"></span>
+        <div class="take-glyph">行</div>
+        <div class="take-word">EXPERIMENT</div>
+        <div class="take-gloss">睡 · 吃 · 動<br>Sleep · Eat · Move</div>
+      </div>
+      <div class="take-cell">
+        <span class="reticle paper"></span>
+        <div class="take-glyph">復</div>
+        <div class="take-word">COMPOUND</div>
+        <div class="take-gloss">長壽智能體<br>Personal Agent</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="fx" aria-label="Agenda">
+    <div class="section-eyebrow"><span class="reticle"></span>AGENDA · 議程</div>
+    <div class="agenda">
+      <div class="agenda-row">
+        <div><span class="agenda-tick reticle"></span><div class="agenda-time">08:30<br>–10:00</div></div>
+        <div>
+          <div class="agenda-title-cjk">抵達｜深度生物標誌物檢測（可選）+ 呼吸基本法 / 4×4 HIIT</div>
+          <div class="agenda-title-en">Arrival | Deep biomarker testing (optional) + breathwork / 4×4 HIIT</div>
+        </div>
+      </div>
+      <div class="agenda-row">
+        <div><span class="agenda-tick reticle"></span><div class="agenda-time">10:00<br>–10:30</div></div>
+        <div>
+          <div class="agenda-title-cjk">科學前沿｜Longevity science 到底在研究什麼（周欣 · 應可鈞）</div>
+          <div class="agenda-title-en">Science frontier | What longevity science actually studies</div>
+        </div>
+      </div>
+      <div class="agenda-row">
+        <div><span class="agenda-tick reticle"></span><div class="agenda-time">10:30<br>–11:00</div></div>
+        <div>
+          <div class="agenda-title-cjk">未來人 Day 0｜一場關於生命複利的實驗（關於 Compound · 生物標誌物 101 · 產品 demo）</div>
+          <div class="agenda-title-en">Future Human Day 0 | An experiment in compounding life</div>
+        </div>
+      </div>
+      <div class="agenda-row">
+        <div><span class="agenda-tick reticle"></span><div class="agenda-time">11:00</div></div>
+        <div>
+          <div class="agenda-title-cjk">Brunch 開啟（自助）</div>
+          <div class="agenda-title-en">Brunch opens</div>
+        </div>
+      </div>
+      <div class="agenda-row">
+        <div><span class="agenda-tick reticle"></span><div class="agenda-time">11:15<br>–12:00</div></div>
+        <div>
+          <div class="agenda-title-cjk">沙龍｜嘉賓對談：未來生命，到底意味著什麼?（周欣 · 應可鈞 · 陳鋼 · 呂鑫）</div>
+          <div class="agenda-title-en">Salon | Panel: What does a future life actually mean?</div>
+        </div>
+      </div>
+      <div class="agenda-row">
+        <div><span class="agenda-tick reticle"></span><div class="agenda-time">12:00<br>–12:30</div></div>
+        <div>
+          <div class="agenda-title-cjk">踐行｜數據驅動的自我健康優化 + 部署你的 agent</div>
+          <div class="agenda-title-en">Practice | Data-driven self-optimization + deploy your agent</div>
+        </div>
+      </div>
+      <div class="agenda-row">
+        <div><span class="agenda-tick reticle"></span><div class="agenda-time">12:30<br>–13:00</div></div>
+        <div>
+          <div class="agenda-title-cjk">自由交流 + 未來預告 + 加入社群</div>
+          <div class="agenda-title-en">Open exchange + what's next</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="speakers-block">
+      <div class="speakers-line">周欣（復旦大學教授）· 應可鈞（哈佛/斯坦福，AI × 衰老）· 陳鋼（微基因 WeGene 創始人）· 呂鑫（瑞金醫院神經外科 · 腦機接口創始人）· 馬馳（北京協和醫院骨科醫生 · 健康 AI 公司創始人）</div>
+      <div class="credentials-line">STANFORD · PRINCETON · HARVARD · 北大 · 復旦 ｜ NATURE AGING (COVER) · SCIENCE</div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="fx" aria-label="Logistics">
+    <div class="section-eyebrow"><span class="reticle"></span>LOGISTICS · 資訊</div>
+    <div class="logistics-grid">
+      <div class="logistics-item">
+        <div class="logistics-label"><span class="reticle"></span>日期 DATE</div>
+        <div class="logistics-value">2026.07.11（週六）<small>8:30–13:00</small></div>
+      </div>
+      <div class="logistics-item">
+        <div class="logistics-label"><span class="reticle"></span>地點 VENUE</div>
+        <div class="logistics-value">Hasa House 2F<small>東湖路 · 上海 [待確定]</small></div>
+      </div>
+      <div class="logistics-item">
+        <div class="logistics-label"><span class="reticle"></span>名額 SEATS</div>
+        <div class="logistics-value">三十席<small>僅限同道 Compounder 推薦，滿即止</small></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hairline">
+
+  <section class="fx" aria-label="Pricing and Registration">
+    <div class="section-eyebrow"><span class="reticle"></span>REGISTER · 報名登記</div>
+
+    <div class="pricing-cards three" id="pricingCards">
+      <button type="button" class="spec-card" id="cardSalon" data-ticket="salon">
+        <div class="spec-card-label"><span class="reticle"></span><span id="salonTierLabel">沙龍席 SALON SEAT</span></div>
+        <div class="spec-card-title">沙龍席 · Salon Seat</div>
+        <div class="spec-card-price" id="salonPrice">¥599</div>
+        <div class="spec-card-note">Day 0 沙龍全程 + 1 個月長壽智能體（現場可升級為會員席）</div>
+      </button>
+      <button type="button" class="spec-card" id="cardMember" data-ticket="member">
+        <div class="spec-card-label"><span class="reticle"></span><span id="memberTierLabel">會員席 MEMBER SEAT</span></div>
+        <div class="spec-card-title">+ 深度生物標誌物檢測</div>
+        <div class="spec-card-price" id="memberPrice">¥2,999</div>
+        <div class="spec-card-note">深度生物標誌物檢測（80+ 項）+ 個性化解讀及健康方案，智能體升級為 3 個月</div>
+      </button>
+      <button type="button" class="spec-card" id="cardOnsite" data-ticket="decide_onsite">
+        <div class="spec-card-label"><span class="reticle"></span><span>到現場再決定</span></div>
+        <div class="spec-card-title">Decide Onsite</div>
+        <div class="spec-card-price">—</div>
+        <div class="spec-card-note">先以沙龍席報名，現場了解後可諮詢升級為會員席</div>
+      </button>
+    </div>
+
+    <div class="perks-note">
+      <span class="reticle" style="margin-top:3px"></span>
+      <span>優惠彩蛋：雙人同行各享 8 折；WeGene 微基因會員基因數據免費接入 agent；未來每邀請一位同道加入，即可為你的專屬智能體「續命」。</span>
+    </div>
+
+    <div aria-live="polite" class="form-error-banner" id="formErrorBanner" role="alert"></div>
+
+    <form id="rsvpForm" novalidate style="margin-top:40px">
+
+      <div class="field" id="fieldName">
+        <label class="field-label" for="inpName">01 · 姓名 Name <span class="req">*</span></label>
+        <input type="text" id="inpName" name="name" autocomplete="name" placeholder="請輸入姓名" required>
+        <div class="field-error" id="errName"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+      </div>
+
+      <div class="field" id="fieldWechat">
+        <label class="field-label" for="inpWechat">02 · 微信號 WeChat ID <span class="req">*</span></label>
+        <input type="text" id="inpWechat" name="wechatId" autocomplete="off" placeholder="請輸入微信號" required>
+        <div class="field-hint">活動以微信作為主要聯繫方式，恕不需要電子郵件</div>
+        <div class="field-error" id="errWechat"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+      </div>
+
+      <div class="field" id="fieldPhone">
+        <label class="field-label" for="inpPhone">03 · 手機 / 郵箱 Phone / Email <span style="color:var(--slate);text-transform:none;letter-spacing:0">（選填）</span></label>
+        <input type="text" id="inpPhone" name="phone" autocomplete="tel email" placeholder="選填，便於現場聯繫">
+        <div class="field-error" id="errPhone"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+      </div>
+
+      <div class="field" id="fieldCompany">
+        <label class="field-label" for="inpCompany">04 · 公司 / 職位 Company / Title <span style="color:var(--slate);text-transform:none;letter-spacing:0">（選填）</span></label>
+        <input type="text" id="inpCompany" name="companyTitle" autocomplete="organization-title" placeholder="選填">
+      </div>
+
+      <div class="field" id="fieldInviter">
+        <label class="field-label" for="inpInviter">05 · 邀請人姓名 Invited by <span style="color:var(--slate);text-transform:none;letter-spacing:0">（選填）</span></label>
+        <input type="text" id="inpInviter" name="inviterName" placeholder="是哪位同道邀請你來的？">
+      </div>
+
+      <div class="field" id="fieldReferral">
+        <label class="field-label" for="inpReferral">06 · 推薦碼 / 邀請密語 Referral Code <span style="color:var(--slate);text-transform:none;letter-spacing:0">（選填）</span></label>
+        <input type="text" id="inpReferral" name="referralCode" autocomplete="off" placeholder="輸入邀請人給你的推薦碼，解鎖同道 / VIP 價 / Enter your referral code to unlock referred pricing" style="text-transform:uppercase">
+        <div class="referral-hint"><span class="reticle" style="margin-top:3px"></span><span id="referralStatus">輸入推薦碼可即時解鎖同道 / VIP 價格。留空則以公開報名價計算。</span></div>
+      </div>
+
+      <div class="field" id="fieldTicket">
+        <label class="field-label">07 · 選擇席位 Choose your seat <span class="req">*</span></label>
+        <div class="field-hint">請點選上方任一席位卡片。若選擇會員席，需另外選擇檢測時段。</div>
+        <div class="field-error" id="errTicketChoice"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+
+        <div class="reveal" id="testingRevealWrap" style="margin-top:14px">
+          <label class="field-label" style="margin-bottom:8px">會員席 · 請選擇生物標誌物檢測時段 Testing slot <span class="req">*</span></label>
+          <div class="choice-group" id="testingSlotGroup" role="radiogroup" aria-label="檢測時段">
+            <label class="choice-pill" data-slot="08:30-09:00"><input type="radio" name="testingSlot" value="08:30-09:00"><span class="dot"></span>8:30–9:00</label>
+            <label class="choice-pill" data-slot="09:00-09:30"><input type="radio" name="testingSlot" value="09:00-09:30"><span class="dot"></span>9:00–9:30</label>
+            <label class="choice-pill" data-slot="09:30-10:00"><input type="radio" name="testingSlot" value="09:30-10:00"><span class="dot"></span>9:30–10:00</label>
+            <label class="choice-pill" data-slot="10:30-11:00"><input type="radio" name="testingSlot" value="10:30-11:00"><span class="dot"></span>10:30–11:00</label>
+          </div>
+          <div class="field-error" id="errTestingSlot"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+
+          <div class="prep-summary" style="margin-left:0">
+            檢測前須知：<b>空腹 10–12 小時</b>；檢測前 <b>24 小時避免劇烈運動</b>；<b>24–72 小時避免飲酒或油膩重食</b>；<b>檢測前 48–72 小時暫停服用生物素 (Biotin) / 複合維他命 B</b>。
+          </div>
+          <label class="toggle-row" id="toggleTestingAck" tabindex="0" role="checkbox" aria-checked="false" style="margin-left:0">
+            <input type="checkbox" id="inpTestingAck" name="testingAck">
+            <span class="toggle-box"></span>
+            <span class="toggle-copy">
+              <span class="toggle-title">我已閱讀並確認檢測前須知 Testing prep acknowledged <span class="req">*</span></span>
+            </span>
+          </label>
+          <div class="field-error" id="errTestingAck"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+        </div>
+      </div>
+
+      <div class="field" id="fieldWorkout">
+        <label class="field-label">08 · 是否參加 8:30–10:00 運動工作坊 Movement block <span class="req">*</span></label>
+        <div class="field-hint">用於場地與器材安排</div>
+        <div class="choice-group" id="workoutGroup" role="radiogroup" aria-label="運動工作坊">
+          <label class="choice-pill" data-workout="breathwork"><input type="radio" name="workoutPref" value="breathwork"><span class="dot"></span>呼吸基本法</label>
+          <label class="choice-pill" data-workout="hiit"><input type="radio" name="workoutPref" value="hiit"><span class="dot"></span>4×4 HIIT</label>
+          <label class="choice-pill" data-workout="zone2"><input type="radio" name="workoutPref" value="zone2"><span class="dot"></span>Zone 2</label>
+          <label class="choice-pill active" data-workout="none"><input type="radio" name="workoutPref" value="none" checked><span class="dot"></span>暫不參加</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="inpNotes">09 · 飲食忌口 / 過敏 Dietary restrictions <span style="color:var(--slate);text-transform:none;letter-spacing:0">（選填）</span></label>
+        <textarea id="inpNotes" name="notes" placeholder="如有飲食限制、過敏或其他備註，請在此說明"></textarea>
+      </div>
+
+      <div class="field">
+        <label class="field-label">10 · 是否有同道 Compounders 同行 Bring companions <span style="color:var(--slate);text-transform:none;letter-spacing:0">（選填）</span></label>
+        <div class="field-hint">雙人同行各享 8 折 — 全員（含你）票價各再打 8 折</div>
+        <div class="choice-group" id="companionCountGroup" role="radiogroup" aria-label="同行人數">
+          <label class="choice-pill active" data-count="0"><input type="radio" name="companionCount" value="0" checked><span class="dot"></span>不同行 · Just me</label>
+          <label class="choice-pill" data-count="1"><input type="radio" name="companionCount" value="1"><span class="dot"></span>1 位同道</label>
+          <label class="choice-pill" data-count="2"><input type="radio" name="companionCount" value="2"><span class="dot"></span>2 位同道</label>
+        </div>
+
+        <div class="reveal" id="companionRevealWrap">
+          <div class="companion-slot" id="companion1Slot">
+            <div class="companion-slot-label">同行者 1 · COMPANION 1</div>
+            <div class="companion-fields">
+              <div>
+                <label class="field-label" for="inpCompanion1Name" style="margin-bottom:6px">姓名 Name</label>
+                <input type="text" id="inpCompanion1Name" name="companion1Name" placeholder="同行者姓名">
+              </div>
+              <div>
+                <label class="field-label" for="inpCompanion1Wechat" style="margin-bottom:6px">微信號 WeChat</label>
+                <input type="text" id="inpCompanion1Wechat" name="companion1Wechat" placeholder="同行者微信號">
+              </div>
+            </div>
+            <div class="field-error" id="errCompanion1"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+          </div>
+          <div class="companion-slot reveal" id="companion2Slot">
+            <div class="companion-slot-label">同行者 2 · COMPANION 2</div>
+            <div class="companion-fields">
+              <div>
+                <label class="field-label" for="inpCompanion2Name" style="margin-bottom:6px">姓名 Name</label>
+                <input type="text" id="inpCompanion2Name" name="companion2Name" placeholder="同行者姓名">
+              </div>
+              <div>
+                <label class="field-label" for="inpCompanion2Wechat" style="margin-bottom:6px">微信號 WeChat</label>
+                <input type="text" id="inpCompanion2Wechat" name="companion2Wechat" placeholder="同行者微信號">
+              </div>
+            </div>
+            <div class="field-error" id="errCompanion2"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="inpTopic">11 · 當天最想探討或體驗的話題 Topic you're curious about <span style="color:var(--slate);text-transform:none;letter-spacing:0">（選填）</span></label>
+        <textarea id="inpTopic" name="topicInterest" placeholder="選填"></textarea>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="inpHealth">12 · 目前如何管理健康 / 最想先解決的問題 Current approach or top question <span style="color:var(--slate);text-transform:none;letter-spacing:0">（選填）</span></label>
+        <textarea id="inpHealth" name="healthChallenge" placeholder="選填"></textarea>
+      </div>
+
+      <div class="consent-block">
+        <label class="toggle-row" id="toggleConsentBasic" tabindex="0" role="checkbox" aria-checked="false">
+          <input type="checkbox" id="inpConsentBasic" name="consentBasic">
+          <span class="toggle-box"></span>
+          <span class="toggle-copy">
+            <span class="toggle-title">我已閱讀並同意服務協議與隱私政策 <span class="req">*</span></span>
+          </span>
+        </label>
+        <div class="legal-links-row">
+          <a class="consent-link" href="/legal/service-agreement" target="_blank" rel="noopener">查看服務協議 ↗</a>
+          <a class="consent-link" href="/legal/privacy-policy" target="_blank" rel="noopener">查看隱私政策 ↗</a>
+        </div>
+        <div class="field-error" id="errConsentBasic"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+
+        <div class="reveal" id="consentHealthWrap">
+          <label class="toggle-row" id="toggleConsentHealth" tabindex="0" role="checkbox" aria-checked="false">
+            <input type="checkbox" id="inpConsentHealth" name="consentHealth">
+            <span class="toggle-box"></span>
+            <span class="toggle-copy">
+              <span class="toggle-title">我已閱讀並同意健康 / 生物標誌檢測知情同意書 <span class="req">*</span></span>
+            </span>
+          </label>
+          <div class="legal-links-row">
+            <a class="consent-link" href="/legal/consent-form" target="_blank" rel="noopener">查看知情同意書全文 ↗</a>
+          </div>
+          <div class="field-error" id="errConsentHealth"><span class="reticle" style="border-color:#FF9E9E"></span><span></span></div>
+        </div>
+      </div>
+
+      <div class="running-total">
+        <span class="running-total-label">預估應付 Estimated Total</span>
+        <span class="running-total-value" id="runningTotal">¥599</span>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn" disabled>
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="btn-label" id="submitLabel">確認報名 · 應付 ¥599</span>
+      </button>
+    </form>
+  </section>
+
+  <section class="confirm-section" id="confirmSection" aria-label="Registration confirmation" tabindex="-1">
+    <div class="section-eyebrow"><span class="reticle"></span>CONFIRMED · 報名成功</div>
+    <div class="confirm-mark"><span class="reticle nested"><span class="reticle-inner"></span></span></div>
+    <div class="confirm-ref">REF</div>
+    <div class="confirm-refcode" id="confirmRef">D0-XXXXX</div>
+
+    <div class="order-card">
+      <div class="order-row"><span class="k">姓名 Name</span><span class="v" id="confirmName">—</span></div>
+      <div class="order-row"><span class="k">價格分層 Tier</span><span class="v" id="confirmTier">—</span></div>
+      <div class="order-row"><span class="k">票種 Ticket</span><span class="v" id="confirmTicket">—</span></div>
+      <div class="order-row"><span class="k">是否含檢測</span><span class="v" id="confirmTesting">—</span></div>
+      <div class="order-row total"><span class="k">應付金額 Amount Due</span><span class="v" id="confirmAmount">¥0</span></div>
+    </div>
+
+    <div id="confirmSoftNote"></div>
+
+    <p class="pay-instructions" id="payInstructions"></p>
+
+    <div class="qr-card" id="qrCard">
+      <img src="/assets/wechat-qr-placeholder.svg" alt="Compound 活動企業微信二維碼">
+      <div class="qr-card-label">長按識別 · 添加企業微信</div>
+    </div>
+
+    <p class="save-note">請將此頁面截圖或加入書籤保存，作為你的報名憑證。</p>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand">COMPOUNDLIFE.AI</div>
+  <div class="footer-links">
+    <a href="/legal/privacy-policy" target="_blank" rel="noopener">隱私政策</a>
+    <a href="/legal/service-agreement" target="_blank" rel="noopener">服務協議</a>
+  </div>
+  <div class="footer-fine">RSVP · BY REFERRAL · 與想一起 COMPOUND 的朋友同行</div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- legal-doc links ----------
+     target="_blank" is honored inconsistently in WeChat's in-app browser
+     (this page's primary audience) — confirmed in testing that even a plain,
+     non-nested <a target="_blank"> can navigate the CURRENT tab instead of
+     opening a new one, which would silently wipe the guest's filled-in form.
+     A capture-phase listener that explicitly preventDefault()s and opens via
+     window.open() is what reliably stops that (a bubble-phase listener does
+     not, empirically). Also kept these links structurally separate from the
+     checkbox toggle <label>s above (see .legal-links-row) so a tap can never
+     land on both a checkbox and a link at once. */
+  document.querySelectorAll('.consent-link').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      window.open(a.href, '_blank', 'noopener');
+    }, { capture: true });
+  });
+
+  /* ---------- topbar scroll state ---------- */
+  var topbar = document.getElementById('topbar');
+  function onScroll(){
+    if (window.scrollY > 40) topbar.classList.add('scrolled');
+    else topbar.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- reveal-on-scroll ---------- */
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fxEls = document.querySelectorAll('.fx');
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+    fxEls.forEach(function(el){ io.observe(el); });
+  } else {
+    fxEls.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- pricing tier table (quote-v2/register-v2 are authoritative) ---------- */
+  var TIERS = {
+    vip:    { label: 'VIP · 專屬邀請',   salon: 0,   addon: 0 },
+    friend: { label: '同道推薦價',       salon: 299, addon: 1700 },
+    public: { label: '公開報名價',       salon: 599, addon: 2400 }
+  };
+  function fmtMoney(n){
+    return '¥' + Number(n).toLocaleString('en-US');
+  }
+
+  var els = {
+    referral: document.getElementById('inpReferral'),
+    referralStatus: document.getElementById('referralStatus'),
+    cardSalon: document.getElementById('cardSalon'),
+    cardMember: document.getElementById('cardMember'),
+    cardOnsite: document.getElementById('cardOnsite'),
+    testingRevealWrap: document.getElementById('testingRevealWrap'),
+    testingSlotGroup: document.getElementById('testingSlotGroup'),
+    testingAckToggle: document.getElementById('toggleTestingAck'),
+    testingAckCheckbox: document.getElementById('inpTestingAck'),
+    workoutGroup: document.getElementById('workoutGroup'),
+    companionCountGroup: document.getElementById('companionCountGroup'),
+    companionRevealWrap: document.getElementById('companionRevealWrap'),
+    companion1Slot: document.getElementById('companion1Slot'),
+    companion2Slot: document.getElementById('companion2Slot'),
+    companion1Name: document.getElementById('inpCompanion1Name'),
+    companion1Wechat: document.getElementById('inpCompanion1Wechat'),
+    companion2Name: document.getElementById('inpCompanion2Name'),
+    companion2Wechat: document.getElementById('inpCompanion2Wechat'),
+    consentBasicToggle: document.getElementById('toggleConsentBasic'),
+    consentBasicCheckbox: document.getElementById('inpConsentBasic'),
+    consentHealthWrap: document.getElementById('consentHealthWrap'),
+    consentHealthToggle: document.getElementById('toggleConsentHealth'),
+    consentHealthCheckbox: document.getElementById('inpConsentHealth'),
+    salonPrice: document.getElementById('salonPrice'),
+    memberPrice: document.getElementById('memberPrice'),
+    salonTierLabel: document.getElementById('salonTierLabel'),
+    memberTierLabel: document.getElementById('memberTierLabel'),
+    runningTotal: document.getElementById('runningTotal'),
+    submitBtn: document.getElementById('submitBtn'),
+    submitLabel: document.getElementById('submitLabel'),
+    form: document.getElementById('rsvpForm'),
+    formErrorBanner: document.getElementById('formErrorBanner'),
+    name: document.getElementById('inpName'),
+    wechat: document.getElementById('inpWechat'),
+    phone: document.getElementById('inpPhone'),
+    company: document.getElementById('inpCompany'),
+    inviter: document.getElementById('inpInviter'),
+    notes: document.getElementById('inpNotes'),
+    topic: document.getElementById('inpTopic'),
+    health: document.getElementById('inpHealth')
+  };
+
+  function setToggleState(toggleEl, checkboxEl, checked){
+    checkboxEl.checked = checked;
+    toggleEl.classList.toggle('checked', checked);
+    toggleEl.setAttribute('aria-checked', checked ? 'true' : 'false');
+  }
+
+  function wireToggle(toggleEl, checkboxEl, onChange){
+    // toggleEl is a <label> wrapping checkboxEl. A real click anywhere in the
+    // label natively forwards to the nested checkbox exactly once (per the
+    // HTML label-activation spec). Also handling 'click' on the label itself
+    // (as this used to) double-toggles: the native forward flips it, then our
+    // own manual flip flips it right back — net zero, so taps on a real
+    // device silently did nothing. Listening on the checkbox's own 'change'
+    // event instead means we react to the one real state change, however it
+    // was triggered (mouse, touch, or keyboard).
+    checkboxEl.addEventListener('change', function(){
+      setToggleState(toggleEl, checkboxEl, checkboxEl.checked);
+      onChange(checkboxEl.checked);
+    });
+    toggleEl.addEventListener('keydown', function(e){
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); checkboxEl.click(); }
+    });
+  }
+
+  function openReveal(el, open){
+    el.classList.toggle('open', open);
+  }
+
+  // Wires a group of `.choice-pill` labels (each wrapping a radio input) as a
+  // single-select control: click/keyboard toggles the checked radio, active
+  // class follows it, onChange(value) fires with the newly selected value.
+  function wireChoiceGroup(groupEl, onChange){
+    var pills = groupEl.querySelectorAll('.choice-pill');
+    var radios = groupEl.querySelectorAll('input[type=radio]');
+    radios.forEach(function(radio){
+      radio.addEventListener('change', function(){
+        pills.forEach(function(p){ p.classList.toggle('active', p.querySelector('input').checked); });
+        onChange(radio.value);
+      });
+    });
+  }
+
+  function selectedValue(groupEl){
+    var checked = groupEl.querySelector('input[type=radio]:checked');
+    return checked ? checked.value : null;
+  }
+
+  var state = {
+    tier: 'public',
+    ticketChoice: 'salon',
+    testingSlot: null,
+    testingAck: false,
+    workoutPref: 'none',
+    companionCount: 0,
+    consentBasic: false,
+    consentHealth: false,
+    quoteLoading: false,
+    quote: null
+  };
+
+  function localAmount(){
+    var t = TIERS[state.tier] || TIERS.public;
+    var wantsTesting = state.ticketChoice === 'member';
+    var perPerson = t.salon + (wantsTesting ? t.addon : 0);
+    var partySize = 1 + state.companionCount;
+    var discount = state.companionCount > 0 ? 0.2 : 0;
+    return Math.round(perPerson * partySize * (1 - discount));
+  }
+
+  function localQuote(){
+    var t = TIERS.public;
+    return {
+      tier: 'public',
+      tierLabel: t.label,
+      codeEntered: els.referral.value.trim().length > 0,
+      codeRecognized: true,
+      salon: t.salon,
+      addon: t.addon,
+      memberTotal: t.salon + t.addon,
+      amountDue: localAmount()
+    };
+  }
+
+  var referralCheckSeq = 0;
+  var referralCheckTimer = null;
+  function requestQuote(){
+    clearTimeout(referralCheckTimer);
+    var seq = ++referralCheckSeq;
+    state.quoteLoading = true;
+    state.quote = localQuote();
+    recompute();
+
+    referralCheckTimer = setTimeout(function(){
+      fetch('/api/quote-v2', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          referralCode: els.referral.value.trim(),
+          ticketChoice: state.ticketChoice,
+          companionCount: state.companionCount
+        })
+      }).then(function(r){ return r.json(); }).then(function(data){
+        if (seq !== referralCheckSeq) return;
+        state.quote = data && data.ok ? data : localQuote();
+        state.tier = state.quote.tier || 'public';
+      }).catch(function(){
+        if (seq !== referralCheckSeq) return;
+        state.quote = localQuote();
+        state.tier = 'public';
+      }).finally(function(){
+        if (seq !== referralCheckSeq) return;
+        state.quoteLoading = false;
+        recompute();
+      });
+    }, 180);
+  }
+
+  function recompute(){
+    var quote = state.quote || localQuote();
+    var salon = quote.salon;
+    var addon = quote.addon;
+    var memberTotal = quote.memberTotal || (salon + addon);
+
+    els.salonPrice.textContent = fmtMoney(salon);
+    els.memberPrice.textContent = fmtMoney(memberTotal);
+    els.salonTierLabel.textContent = (quote.tierLabel || '公開報名價') + ' · 沙龍席';
+    els.memberTierLabel.textContent = (quote.tierLabel || '公開報名價') + ' · 會員席';
+
+    els.cardSalon.classList.toggle('active', state.ticketChoice === 'salon');
+    els.cardMember.classList.toggle('active', state.ticketChoice === 'member');
+    els.cardOnsite.classList.toggle('active', state.ticketChoice === 'decide_onsite');
+
+    var total = Number(quote.amountDue || 0);
+
+    els.runningTotal.textContent = fmtMoney(total);
+    els.runningTotal.classList.toggle('zero', total === 0);
+
+    els.submitLabel.textContent = total === 0 ? '確認報名 · VIP 免費' : ('確認報名 · 應付 ¥' + Number(total).toLocaleString('en-US'));
+
+    var code = els.referral.value.trim();
+    if (!code) {
+      els.referralStatus.textContent = '輸入口令可解鎖 VIP / 同道推薦價。留空則以公開報名價計算。';
+    } else if (state.quoteLoading) {
+      els.referralStatus.textContent = '正在核對口令並刷新價格…';
+    } else if (quote.codeRecognized === false) {
+      els.referralStatus.textContent = '口令未識別，將按公開報名價計算。';
+    } else {
+      els.referralStatus.textContent = (quote.tierLabel || '推薦價') + '已解鎖，價格已刷新。';
+    }
+
+    validateForm();
+  }
+
+  function selectTicket(choice){
+    state.ticketChoice = choice;
+    hideFieldError('errTicketChoice');
+    var isMember = choice === 'member';
+    openReveal(els.testingRevealWrap, isMember);
+    openReveal(els.consentHealthWrap, isMember);
+    if (!isMember) {
+      state.testingAck = false;
+      setToggleState(els.testingAckToggle, els.testingAckCheckbox, false);
+      hideFieldError('errTestingAck');
+      state.consentHealth = false;
+      setToggleState(els.consentHealthToggle, els.consentHealthCheckbox, false);
+      hideFieldError('errConsentHealth');
+    }
+    requestQuote();
+  }
+  els.cardSalon.addEventListener('click', function(){ selectTicket('salon'); });
+  els.cardMember.addEventListener('click', function(){ selectTicket('member'); });
+  els.cardOnsite.addEventListener('click', function(){ selectTicket('decide_onsite'); });
+
+  wireChoiceGroup(els.testingSlotGroup, function(value){
+    state.testingSlot = value;
+    hideFieldError('errTestingSlot');
+  });
+
+  wireChoiceGroup(els.workoutGroup, function(value){
+    state.workoutPref = value;
+  });
+
+  wireChoiceGroup(els.companionCountGroup, function(value){
+    state.companionCount = parseInt(value, 10) || 0;
+    openReveal(els.companionRevealWrap, state.companionCount > 0);
+    openReveal(els.companion2Slot, state.companionCount >= 2);
+    if (state.companionCount < 1) hideFieldError('errCompanion1');
+    if (state.companionCount < 2) hideFieldError('errCompanion2');
+    requestQuote();
+  });
+
+  wireToggle(els.testingAckToggle, els.testingAckCheckbox, function(checked){
+    state.testingAck = checked;
+    if (checked) hideFieldError('errTestingAck');
+    validateForm();
+  });
+
+  wireToggle(els.consentBasicToggle, els.consentBasicCheckbox, function(checked){
+    state.consentBasic = checked;
+    if (checked) hideFieldError('errConsentBasic');
+    validateForm();
+  });
+
+  wireToggle(els.consentHealthToggle, els.consentHealthCheckbox, function(checked){
+    state.consentHealth = checked;
+    if (checked) hideFieldError('errConsentHealth');
+    validateForm();
+  });
+
+  els.referral.addEventListener('input', function(){
+    els.referral.value = els.referral.value.toUpperCase();
+    requestQuote();
+  });
+  els.referral.addEventListener('blur', requestQuote);
+
+  /* ---------- validation ---------- */
+  var fieldTouched = { name:false, wechatId:false, phone:false };
+
+  function showFieldError(id, msg){
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.querySelector('span:last-child').textContent = msg;
+    el.classList.add('show');
+  }
+  function hideFieldError(id){
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.classList.remove('show');
+  }
+
+  function setInvalid(fieldId, invalid){
+    var el = document.getElementById(fieldId);
+    if (el) el.classList.toggle('invalid', invalid);
+  }
+
+  function validateName(showErr){
+    var v = els.name.value.trim();
+    var ok = v.length >= 1 && v.length <= 80;
+    if (showErr) {
+      setInvalid('fieldName', !ok);
+      if (!ok) showFieldError('errName', '請填寫姓名 Please enter your name');
+      else hideFieldError('errName');
+    }
+    return ok;
+  }
+  function validateWechat(showErr){
+    var v = els.wechat.value.trim();
+    var ok = v.length >= 2 && v.length <= 64;
+    if (showErr) {
+      setInvalid('fieldWechat', !ok);
+      if (!ok) showFieldError('errWechat', '請填寫微信號 Please enter your WeChat ID');
+      else hideFieldError('errWechat');
+    }
+    return ok;
+  }
+  function validatePhone(showErr){
+    var v = els.phone.value.trim();
+    if (!v) { if (showErr) { setInvalid('fieldPhone', false); hideFieldError('errPhone'); } return true; }
+    var digits = (v.match(/\d/g) || []).length;
+    var looksLikePhone = v.length <= 32 && digits >= 7 && /^[+\d][\d\s\-()]*$/.test(v);
+    var looksLikeEmail = v.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    var ok = looksLikePhone || looksLikeEmail;
+    if (showErr) {
+      setInvalid('fieldPhone', !ok);
+      if (!ok) showFieldError('errPhone', '請填寫有效手機號碼或郵箱，或留空');
+      else hideFieldError('errPhone');
+    }
+    return ok;
+  }
+
+  els.name.addEventListener('input', function(){ if (fieldTouched.name) validateName(true); validateForm(); });
+  els.name.addEventListener('blur', function(){ fieldTouched.name = true; validateName(true); });
+  els.wechat.addEventListener('input', function(){ if (fieldTouched.wechatId) validateWechat(true); validateForm(); });
+  els.wechat.addEventListener('blur', function(){ fieldTouched.wechatId = true; validateWechat(true); });
+  els.phone.addEventListener('input', function(){ if (fieldTouched.phone) validatePhone(true); validateForm(); });
+  els.phone.addEventListener('blur', function(){ fieldTouched.phone = true; validatePhone(true); });
+
+  function validateForm(){
+    var nameOk = validateName(false);
+    var wechatOk = validateWechat(false);
+    var phoneOk = validatePhone(false);
+    var isMember = state.ticketChoice === 'member';
+    var testingSlotOk = !isMember || !!state.testingSlot;
+    var testingAckOk = !isMember || state.testingAck;
+    var companion1Ok = state.companionCount < 1 || (els.companion1Name.value.trim() && els.companion1Wechat.value.trim());
+    var companion2Ok = state.companionCount < 2 || (els.companion2Name.value.trim() && els.companion2Wechat.value.trim());
+    var consentOk = state.consentBasic;
+    var healthOk = !isMember || state.consentHealth;
+
+    var allOk = nameOk && wechatOk && phoneOk && testingSlotOk && testingAckOk &&
+      companion1Ok && companion2Ok && consentOk && healthOk;
+    els.submitBtn.disabled = !allOk;
+    return allOk;
+  }
+
+  els.companion1Name.addEventListener('input', validateForm);
+  els.companion1Wechat.addEventListener('input', validateForm);
+  els.companion2Name.addEventListener('input', validateForm);
+  els.companion2Wechat.addEventListener('input', validateForm);
+
+  /* ---------- submit ---------- */
+  function setLoading(loading){
+    els.submitBtn.classList.toggle('loading', loading);
+    els.submitBtn.disabled = loading || !validateForm();
+  }
+
+  function showFormError(msg){
+    els.formErrorBanner.textContent = msg;
+    els.formErrorBanner.classList.add('show');
+  }
+  function clearFormError(){
+    els.formErrorBanner.classList.remove('show');
+    els.formErrorBanner.textContent = '';
+  }
+
+  els.form.addEventListener('submit', function(e){
+    e.preventDefault();
+    fieldTouched.name = true; fieldTouched.wechatId = true; fieldTouched.phone = true;
+    validateName(true); validateWechat(true); validatePhone(true);
+    if (!validateForm()) return;
+
+    clearFormError();
+    setLoading(true);
+
+    var payload = {
+      name: els.name.value.trim(),
+      wechatId: els.wechat.value.trim(),
+      phone: els.phone.value.trim(),
+      companyTitle: els.company.value.trim(),
+      referralCode: els.referral.value.trim(),
+      inviterName: els.inviter.value.trim(),
+      ticketChoice: state.ticketChoice,
+      testingSlot: state.testingSlot || '',
+      workoutPref: state.workoutPref,
+      companionCount: state.companionCount,
+      companion1: { name: els.companion1Name.value.trim(), wechat: els.companion1Wechat.value.trim() },
+      companion2: { name: els.companion2Name.value.trim(), wechat: els.companion2Wechat.value.trim() },
+      topicInterest: els.topic.value.trim(),
+      healthChallenge: els.health.value.trim(),
+      notes: els.notes.value.trim(),
+      testingAck: state.testingAck,
+      consent: { service: state.consentBasic, privacy: state.consentBasic, health: state.consentHealth }
+    };
+
+    fetch('/api/register-v2', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function(res){
+      return res.json().then(function(data){ return { status: res.status, data: data }; });
+    }).then(function(result){
+      setLoading(false);
+      handleResponse(result.status, result.data);
+    }).catch(function(){
+      setLoading(false);
+      showFormError('網絡錯誤，請檢查網絡後重試');
+    });
+  });
+
+  function tierLabelFor(tier){
+    var map = { vip: 'VIP · 專屬邀請', friend: '同道推薦價', public: '公開報名價' };
+    return map[tier] || tier;
+  }
+
+  function handleResponse(status, data){
+    if (status === 201 && data && data.ok) {
+      showConfirmation(data, false);
+      return;
+    }
+    if (status === 409 && data && data.error === 'duplicate') {
+      if (data.registration) {
+        var r = data.registration;
+        showConfirmation({
+          ref: r.ref,
+          name: r.name,
+          tier: r.tier,
+          tierLabel: r.tierLabel || tierLabelFor(r.tier),
+          ticketChoice: r.ticketChoice || 'salon',
+          wantsTesting: !!r.wantsTesting,
+          companionCount: r.companionCount || 0,
+          amountDue: r.amountDue,
+          currency: 'CNY',
+          paymentStatus: r.paymentStatus,
+          codeRecognized: true
+        }, true);
+      } else {
+        showFormError(data.message || '此微信號已提交過報名');
+      }
+      return;
+    }
+    if (status === 400 && data) {
+      if (data.error === 'validation') {
+        var fieldMap = { name: 'errName', wechatId: 'errWechat', phone: 'errPhone',
+          ticketChoice: 'errTicketChoice', testingSlot: 'errTestingSlot',
+          companion1: 'errCompanion1', companion2: 'errCompanion2' };
+        var elId = fieldMap[data.field];
+        if (elId) { showFieldError(elId, data.message || '請確認此欄位'); }
+        showFormError(data.message || '請確認表單資料');
+        return;
+      }
+      if (data.error === 'testing_ack_required') {
+        showFieldError('errTestingAck', data.message || '請先確認已閱讀檢測前須知');
+        showFormError(data.message || '請先確認已閱讀檢測前須知');
+        return;
+      }
+      if (data.error === 'consent_required') {
+        showFieldError('errConsentBasic', data.message || '請閱讀並同意服務協議與隱私政策');
+        showFormError(data.message || '請閱讀並同意服務協議與隱私政策');
+        return;
+      }
+      if (data.error === 'health_consent_required') {
+        showFieldError('errConsentHealth', data.message || '選擇檢測需另外同意健康知情同意書');
+        showFormError(data.message || '選擇檢測需另外同意健康知情同意書');
+        return;
+      }
+      showFormError((data && data.message) || '請確認表單資料後重試');
+      return;
+    }
+    if (status === 500) {
+      showFormError((data && data.message) || '伺服器發生錯誤，請稍後重試');
+      return;
+    }
+    showFormError('發生未預期的錯誤，請稍後重試');
+  }
+
+  function showConfirmation(data, isDuplicate){
+    var pricingSection = document.getElementById('pricingCards').closest('section');
+    pricingSection.style.display = 'none';
+    var confirmSection = document.getElementById('confirmSection');
+    confirmSection.classList.add('show');
+
+    document.getElementById('confirmRef').textContent = data.ref || '—';
+    document.getElementById('confirmName').textContent = data.name || '—';
+    document.getElementById('confirmTier').textContent = data.tierLabel || tierLabelFor(data.tier);
+    var ticketLabel = data.ticketChoice === 'member' ? '會員席 Member Seat'
+      : data.ticketChoice === 'decide_onsite' ? '到現場再決定（暫以沙龍席計價）'
+      : '沙龍席 Salon Seat';
+    document.getElementById('confirmTicket').textContent = ticketLabel;
+    document.getElementById('confirmTesting').textContent = data.wantsTesting ? '含深度生物標誌物檢測' : '不含檢測';
+
+    var amt = Number(data.amountDue || 0);
+    var amountEl = document.getElementById('confirmAmount');
+    amountEl.textContent = amt > 0 ? fmtMoney(amt) : '¥0';
+    amountEl.classList.toggle('zero', amt === 0);
+
+    var softNote = document.getElementById('confirmSoftNote');
+    softNote.innerHTML = '';
+    if (data.codeRecognized === false) {
+      var n = document.createElement('div');
+      n.className = 'soft-note';
+      n.textContent = '推薦碼未識別，已按公開價計算';
+      softNote.appendChild(n);
+    }
+    if (isDuplicate) {
+      var d = document.createElement('div');
+      d.className = 'soft-note';
+      d.textContent = '此微信號已完成報名，以下為你的既有登記資訊。';
+      softNote.appendChild(d);
+    }
+
+    var payInstructions = document.getElementById('payInstructions');
+    var qrCard = document.getElementById('qrCard');
+    if (amt > 0) {
+      payInstructions.textContent = '請於 24 小時內長按識別下方二維碼添加企業微信，並備註【姓名 + 報名碼】完成支付，完成後席位即確認保留。';
+      qrCard.style.display = 'flex';
+    } else {
+      payInstructions.textContent = '已確認 · VIP 全程免費。歡迎長按識別下方二維碼添加企業微信，方便我們同步活動當日資訊。';
+      qrCard.style.display = 'flex';
+    }
+
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    setTimeout(function(){
+      confirmSection.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      confirmSection.focus();
+    }, reduceMotion ? 0 : 350);
+  }
+
+  /* ---------- init ---------- */
+  requestQuote();
+})();
+</script>
+</body>
+</html>
