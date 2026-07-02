@@ -10,26 +10,14 @@
 // This map intentionally never ships to the browser (see quote-v2.js) so the
 // code list stays confidential.
 export const REFERRAL_CODES = {
-  "VIP": "vip",
-  "COMPOUND-VIP": "vip",
-  "DAY0-VIP": "vip",
-  "VIPFREE": "vip",
-  "VIP推荐": "friend",
-  "VIP-推荐": "friend",
-  "VIPFRIEND": "friend",
-  "VIP-FRIEND": "friend",
-  "FRIEND": "friend",
-  "内推": "friend",
-  "內推": "friend",
-  "INTERNAL": "friend",
-  "COMPOUND-FRIEND": "friend",
-  "DAY0-FRIEND": "friend",
+  "ONLYCOMPOUND": "vip",
+  "COMPOUNDONE": "friend",
 };
 
 export const TIERS = {
   vip: { label: "VIP · 專屬邀請", salon: 0, addon: 0 },
   friend: { label: "同道推薦價", salon: 299, addon: 1700 },
-  public: { label: "公開報名價", salon: 599, addon: 2400 },
+  public: { label: "標準價", salon: 599, addon: 2400 },
 };
 
 // Resolve a raw (possibly empty/garbage) referral code string to a tier.
